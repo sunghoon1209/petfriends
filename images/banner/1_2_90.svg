@@ -1,0 +1,25 @@
+<svg width="68" height="68" viewBox="0 0 68 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect opacity="0.9" width="68" height="68" rx="20" fill="#FFF2F6"/>
+<mask id="mask0_3210_34805" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="14" y="14" width="40" height="40">
+<rect x="14" y="14" width="40" height="40" fill="#BDBDBD"/>
+</mask>
+<g mask="url(#mask0_3210_34805)">
+<ellipse cx="33.9986" cy="39" rx="9.99865" ry="10" fill="#FF4081"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M19.7977 33.9111C19.7977 33.9111 19.8604 34.0081 20.0576 34.6731C20.9504 37.6836 21.906 39.1888 22.9244 39.1888C23.883 39.1888 24.5116 38.1125 24.8103 35.96" fill="white"/>
+<path d="M19.7977 33.9111C19.7977 33.9111 19.8604 34.0081 20.0576 34.6731C20.9504 37.6836 21.906 39.1888 22.9244 39.1888C23.883 39.1888 24.5116 38.1125 24.8103 35.96" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M48.2239 33.9111C48.2239 33.9111 48.1394 34.0081 47.9422 34.6731C47.0493 37.6836 46.0937 39.1888 45.0754 39.1888C44.131 39.1888 43.5069 38.1444 43.2031 36.0555" fill="white"/>
+<path d="M48.2239 33.9111C48.2239 33.9111 48.1394 34.0081 47.9422 34.6731C47.0493 37.6836 46.0937 39.1888 45.0754 39.1888C44.131 39.1888 43.5069 38.1444 43.2031 36.0555" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M16.6923 27.1481C16.6923 31.782 20.2346 35.577 24.7233 35.9007C24.929 35.9155 25.1367 35.923 25.3461 35.923C30.1255 35.923 33.9999 31.9944 33.9999 27.1481" fill="#FFF2F6"/>
+<path d="M16.6923 27.1481C16.6923 31.782 20.2346 35.577 24.7233 35.9007C24.929 35.9155 25.1367 35.923 25.3461 35.923C30.1255 35.923 33.9999 31.9944 33.9999 27.1481" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M34 27.1481C34 31.9944 37.8745 35.923 42.6538 35.923C47.4332 35.923 51.3077 31.9944 51.3077 27.1481" fill="#FFF2F6"/>
+<path d="M34 27.1481C34 31.9944 37.8745 35.923 42.6538 35.923C47.4332 35.923 51.3077 31.9944 51.3077 27.1481" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="44.1441" cy="26.3557" r="1.00961" fill="black"/>
+<circle cx="44.1441" cy="30.2019" r="1.00961" fill="black"/>
+<circle cx="47.0287" cy="28.2788" r="1.00961" fill="black"/>
+<circle cx="1.00961" cy="1.00961" r="1.00961" transform="matrix(-1 0 0 1 24.8653 25.3461)" fill="black"/>
+<circle cx="1.00961" cy="1.00961" r="1.00961" transform="matrix(-1 0 0 1 24.8654 29.1923)" fill="black"/>
+<circle cx="1.00961" cy="1.00961" r="1.00961" transform="matrix(-1 0 0 1 21.9807 27.2692)" fill="black"/>
+<path d="M34 25.3461V28.2307" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<ellipse cx="34.2789" cy="24.3248" rx="3.64438" ry="2.82476" fill="white" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</svg>

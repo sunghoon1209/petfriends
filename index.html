@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 주성훈 - Shopping Cart</title>
+    <link rel="stylesheet" href="./style/style.css">
+
+    <script  src="./js/shop.js"></script>
+</head>
+
+<body>
+    <div id="wrap">
+        <header>
+            <div class="headerInner">
+                <h1 class="logo"><img src="./images/logo_petfriends.png" alt="펫프렌즈로고"></h1>
+                <div class="searchTab">
+                    <input type="text" id="searchBox" placeholder="어떤 상품을 찾으시나요?">
+                    <div class="searchPage" id="searchPage">
+                        <h2>펫프 인기 검색어</h2>
+                        <div class="searchTextCover">
+                            <span>댕댕이들이 가장 많이 찾는 상품</sapn> <span>2024.02. 낮 12:00</span></div>
+                        <ol class="SearchOrder">
+                            <li>강아지옷</li>
+                            <li>스텔라앤츄이스</li>
+                            <li>페스룸</li>
+                            <li>호랑이</li>
+                            <li>터키츄</li>
+                            <li>트라이엄프</li>
+                            <li>배변패드</li>
+                            <li>요요쉬</li>
+                            <li>후코이단</li>
+                            <li>치약</li>
+
+                        </ol>
+
+                    </div>
+                </div>
+                <nav class="nav_list">
+                    <div class="my"><img src="./images/my.svg" alt=""></div>
+                    <div class="cart" id="cartBtn"><img src="./images/shop.svg" alt=""></div>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <section id="mainBanner">
+                <div class="mainBanner_list">
+                    <img src="./images/swiper/banner01.png" alt="배너1">
+                </div>
+            </section>
+            <section id="banner">
+                
+                <div class="membership">
+                    <img src="./images/membership3.png" alt="">
+                    <img src="./images/membership1.png" alt="">
+                    <img src="./images/membership2.png" alt="">
+
+                    <img src="./images/membership4.png" alt="">
+                </div>
+                <div class="banner"></div>
+            </section>
+            <section id="mainProduct">
+                <!-- 장바구니 -->
+                <div id="nav">
+                    <div class="logo">
+                        <a href="#"><img src="./images/logo_petfriends.png" alt="쿠팡로고"></a>
+                    </div>
+                    <div id="cart">
+                        <!-- <h2>장바구니</h2> -->
+                        <!-- button#clear-cart -->
+                      
+                        <!-- ul#clear-items -->
+                        <ul id="clear-items">
+                            <!-- 삭제처리된 li들이 들어옴 -->
+                        </ul>
+                        <button id="clear-cart" onclick="clearCart()">전체삭제</button>
+                    </div>
+                </div>
+
+                <!-- 제품 -->
+                <div class="product-container">
+                    <!-- 1 -->
+                    <div class="product">
+                        <img src="./images/product/product01.jpeg" alt="상품1">
+                        <div class="product-details">
+                            <h2>캣만두 라이프 에센셜 치킨 142g</h2>
+                            <p class="price">
+
+                              
+                                <span class="red"></span>
+                                33,000원
+                                <span><del></del></span>
+
+                            </p>
+                            <div class="stars">
+                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
+                                        fill="current"></path>
+                                </svg>
+                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
+                                        fill="current"></path>
+                                </svg>
+                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
+                                        fill="current"></path>
+                                </svg>
+                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
+                                        fill="current"></path>
+                                </svg>
+                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
+                                        fill="current"></path>
+                                </svg>
+                                (22,540)
+                            </div>
+
+
+                            <!-- 장바구니 좋아요버튼 -->
+                            <button onclick="addToCart(this)"> 장바구니 추가</button>
+                            <button class="like-button" onclick="toggleLike(this)"> </button>
+                        </div>
+                    </div>
+                    <!-- 2 -->
+                    <div class="product">
+                        <img src="./images/product/product02.gif" alt="상품1">
+                        <div class="product-details">
+                            <h2>[어워즈]촉촉트릿 북어 80g</h2>
+                            <p class="price">
+                                <span class="red">21%</span>
+                                11,900원
+                                <span><del> 15,000원</del></span>
+                            </p>
+                            <div class="stars">
+                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
+                                        fill="current"></path>
+                                </svg>
+                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
+                                        fill="current"></path>
+                                </svg>
+                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
+                                        fill="current"></path>
+                                </svg>
+                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
+                                        fill="current"></path>
+                                </svg>
+                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
+                                        fill="current"></path>
+                                </svg>
+                                (22,540)
+                            </div>
+
+
+                            <!-- 장바구니 좋아요버튼 -->
+                            <button onclick="addToCart(this)"> 장바구니 추가</button>
+                            <button class="like-button" onclick="toggleLike(this)"> </button>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="./images/product/product03.jpeg" alt="상품1">
+                        <div class="product-details">
+                            <h2>호랑이 간식 27종[모음]</h2>
+                            <p class="price">
+                                <span class="red">29%</span>
+                                9,900원
+                                <span><del> 14,000원</del></span>
+                            </p>
+                            <div class="stars">
+                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
+                                        fill="current"></path>
+                                </svg>
+                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
+                                        fill="current"></path>
+                                </svg>
+                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
+                                        fill="current"></path>
+                                </svg>
+                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
+                                        fill="current"></path>
+                                </svg>
+                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
+                                        fill="current"></path>
+                                </svg>
+                                (22,540)
+                            </div>
+
+
+                            <!-- 장바구니 좋아요버튼 -->
+                            <button onclick="addToCart(this)"> 장바구니 추가</button>
+                            <button class="like-button" onclick="toggleLike(this)"> </button>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="./images/product/product04.jpeg" alt="상품1">
+                        <div class="product-details">
+                            <h2>캣만두 라이프 에센셜 치킨 리틀 142g</h2>
+                            <p class="price">
+
+                              
+                                <span class="red"></span>
+                                33,000원
+                                <span><del></del></span>
+                            </p>
+                            <div class="stars">
+                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
+                                        fill="current"></path>
+                                </svg>
+                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
+                                        fill="current"></path>
+                                </svg>
+                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
+                                        fill="current"></path>
+                                </svg>
+                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
+                                        fill="current"></path>
+                                </svg>
+                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
+                                        fill="current"></path>
+                                </svg>
+                                (22,540)
+                            </div>
+
+
+                            <!-- 장바구니 좋아요버튼 -->
+                            <button onclick="addToCart(this)"> 장바구니 추가</button>
+                            <button class="like-button" onclick="toggleLike(this)"> </button>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="./images/product/product05.jpeg" alt="상품1">
+                        <div class="product-details">
+                            <h2>마도로스펫 북어트릿 120g</h2>
+                            <p class="price">
+                                <span class="red"></span>
+                                16,000원
+                                <span><del></del></span>
+
+                            </p>
+                            <div class="stars">
+                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
+                                        fill="current"></path>
+                                </svg>
+                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
+                                        fill="current"></path>
+                                </svg>
+                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
+                                        fill="current"></path>
+                                </svg>
+                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
+                                        fill="current"></path>
+                                </svg>
+                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
+                                        fill="current"></path>
+                                </svg>
+                                (22,540)
+                            </div>
+
+
+                            <!-- 장바구니 좋아요버튼 -->
+                            <button onclick="addToCart(this)"> 장바구니 추가</button>
+                            <button class="like-button" onclick="toggleLike(this)"> </button>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="./images/product/product06.jpeg" alt="상품1">
+                        <div class="product-details">
+                            <h2>[어워즈]본앤츄 위클리팩 터키츄 소고기힘줄 라운드타입 15g 7p</h2>
+                            <p class="price">
+                                <span class="red">20%</span>
+                                6,400원
+                                <span><del> 8,000원</del></span>
+                            </p>
+                            <div class="stars">
+                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
+                                        fill="current"></path>
+                                </svg>
+                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
+                                        fill="current"></path>
+                                </svg>
+                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
+                                        fill="current"></path>
+                                </svg>
+                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
+                                        fill="current"></path>
+                                </svg>
+                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
+                                        fill="current"></path>
+                                </svg>
+                                (22,540)
+                            </div>
+
+
+                            <!-- 장바구니 좋아요버튼 -->
+                            <button onclick="addToCart(this)"> 장바구니 추가</button>
+                            <button class="like-button" onclick="toggleLike(this)"> </button>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="./images/product/product07.webp" alt="상품1">
+                        <div class="product-details">
+                            <h2>메디멀 독 치카잼 관절 대용량 15g*25p</h2>
+                            <p class="price">
+                                <span class="red">28%</span>
+                                29,000원
+                                <span><del> 40,000원</del></span>
+                            </p>
+                            <div class="stars">
+                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
+                                        fill="current"></path>
+                                </svg>
+                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
+                                        fill="current"></path>
+                                </svg>
+                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
+                                        fill="current"></path>
+                                </svg>
+                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
+                                        fill="current"></path>
+                                </svg>
+                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
+                                        fill="current"></path>
+                                </svg>
+                                (22,540)
+                            </div>
+
+
+                            <!-- 장바구니 좋아요버튼 -->
+                            <button onclick="addToCart(this)"> 장바구니 추가</button>
+                            <button class="like-button" onclick="toggleLike(this)"> </button>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="./images/product/product08.webp" alt="상품1">
+                        <div class="product-details">
+                            <h2>알로 가득찬 동결건조 간식 촉촉트릿 열빙어 20g</h2>
+                            <p class="price">
+                                <span class="red">15%</span>
+                                4,700원
+                                <span><del> 5,500원</del></span>
+                            </p>
+                            <div class="stars">
+                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
+                                        fill="current"></path>
+                                </svg>
+                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
+                                        fill="current"></path>
+                                </svg>
+                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
+                                        fill="current"></path>
+                                </svg>
+                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
+                                        fill="current"></path>
+                                </svg>
+                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
+                                        fill="current"></path>
+                                </svg>
+                                (22,540)
+                            </div>
+
+
+                            <!-- 장바구니 좋아요버튼 -->
+                            <button onclick="addToCart(this)"> 장바구니 추가</button>
+                            <button class="like-button" onclick="toggleLike(this)"> </button>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="./images/product/product09.jpeg" alt="상품1">
+                        <div class="product-details">
+                            <h2>[ONLY펫프] 인트라젠 영양제 위장&면역 50p</h2>
+                            <p class="price">
+                                <span class="red">23%</span>
+                                13,900원
+                                <span><del> 18,000원</del></span>
+                            </p>
+                            <div class="stars">
+                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
+                                        fill="current"></path>
+                                </svg>
+                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
+                                        fill="current"></path>
+                                </svg>
+                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
+                                        fill="current"></path>
+                                </svg>
+                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
+                                        fill="current"></path>
+                                </svg>
+                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
+                                        fill="current"></path>
+                                </svg>
+                                (22,540)
+                            </div>
+
+
+                            <!-- 장바구니 좋아요버튼 -->
+                            <button onclick="addToCart(this)"> 장바구니 추가</button>
+                            <button class="like-button" onclick="toggleLike(this)"> </button>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="./images/product/product14.jpeg" alt="상품1">
+                        <div class="product-details">
+                            <h2>진짜육포 12종[모음]</h2>
+                            <p class="price">
+                                <span class="red">41%</span>
+                                5,900원
+                                <span><del> 10,000원</del></span>
+                            </p>
+                            <div class="stars">
+                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
+                                        fill="current"></path>
+                                </svg>
+                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
+                                        fill="current"></path>
+                                </svg>
+                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
+                                        fill="current"></path>
+                                </svg>
+                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
+                                        fill="current"></path>
+                                </svg>
+                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
+                                        fill="current"></path>
+                                </svg>
+                                (22,540)
+                            </div>
+
+
+                            <!-- 장바구니 좋아요버튼 -->
+                            <button onclick="addToCart(this)"> 장바구니 추가</button>
+                            <button class="like-button" onclick="toggleLike(this)"> </button>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="./images/product/product11.png" alt="상품1">
+                        <div class="product-details">
+                            <h2>포켄스 덴티페어리 독 디스펜서 소형견용 S 80p</h2>
+                            <p class="price">
+                                <span class="red">4%</span>
+                                32,900원
+                                <span><del> 34,200원</del></span>
+                            </p>
+                            <div class="stars">
+                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
+                                        fill="current"></path>
+                                </svg>
+                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
+                                        fill="current"></path>
+                                </svg>
+                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
+                                        fill="current"></path>
+                                </svg>
+                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
+                                        fill="current"></path>
+                                </svg>
+                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
+                                        fill="current"></path>
+                                </svg>
+                                (22,540)
+                            </div>
+
+
+                            <!-- 장바구니 좋아요버튼 -->
+                            <button onclick="addToCart(this)"> 장바구니 추가</button>
+                            <button class="like-button" onclick="toggleLike(this)"> </button>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="./images/product/product12.jpeg" alt="상품1">
+                        <div class="product-details">
+                            <h2>마이베프 별자리스틱 올인원패키지 15g*7p</h2>
+                            <p class="price">
+                                <span class="red">2%</span>
+                                5,900원
+                                <span><del> 6,000원</del></span>
+                            </p>
+                            <div class="stars">
+                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
+                                        fill="current"></path>
+                                </svg>
+                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
+                                        fill="current"></path>
+                                </svg>
+                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
+                                        fill="current"></path>
+                                </svg>
+                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
+                                        fill="current"></path>
+                                </svg>
+                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
+                                        fill="current"></path>
+                                </svg>
+                                (22,540)
+                            </div>
+
+
+                            <!-- 장바구니 좋아요버튼 -->
+                            <button onclick="addToCart(this)"> 장바구니 추가</button>
+                            <button class="like-button" onclick="toggleLike(this)"> </button>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="./images/product/product12.webp" alt="상품1">
+                        <div class="product-details">
+                            <h2> 메디멀 독 가글츄 대용량 25p</h2>
+                            <p class="price">
+                                <span class="red">35%</span>
+                                22,900원
+                                <span><del> 35,000원</del></span>
+                            </p>
+                            <div class="stars">
+                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
+                                        fill="current"></path>
+                                </svg>
+                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
+                                        fill="current"></path>
+                                </svg>
+                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
+                                        fill="current"></path>
+                                </svg>
+                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
+                                        fill="current"></path>
+                                </svg>
+                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
+                                        fill="current"></path>
+                                </svg>
+                                (22,540)
+                            </div>
+
+
+                            <!-- 장바구니 좋아요버튼 -->
+                            <button onclick="addToCart(this)"> 장바구니 추가</button>
+                            <button class="like-button" onclick="toggleLike(this)"> </button>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="./images/product/product10.jpeg" alt="상품1">
+                        <div class="product-details">
+                            <h2>강아지 촉촉트릿 13종 [모음]</h2>
+                            <p class="price">
+                                <span class="red">39%</span>
+                                8,500원
+                                <span><del> 14,000원</del></span>
+                            </p>
+                            <div class="stars">
+                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
+                                        fill="current"></path>
+                                </svg>
+                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
+                                        fill="current"></path>
+                                </svg>
+                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
+                                        fill="current"></path>
+                                </svg>
+                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
+                                        fill="current"></path>
+                                </svg>
+                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
+                                        fill="current"></path>
+                                </svg>
+                                (22,540)
+                            </div>
+
+
+                            <!-- 장바구니 좋아요버튼 -->
+                            <button onclick="addToCart(this)"> 장바구니 추가</button>
+                            <button class="like-button" onclick="toggleLike(this)"> </button>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="./images/product/product15.jpeg" alt="상품1">
+                        <div class="product-details">
+                            <h2>[특가할인] 호랑이 덴탈 플라그껌 40p</h2>
+                            <p class="price">
+                                <span class="red">21%</span>
+                                10,900원
+                                <span><del> 14,000원</del></span>
+                            </p>
+                            <div class="stars">
+                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
+                                        fill="current"></path>
+                                </svg>
+                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
+                                        fill="current"></path>
+                                </svg>
+                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
+                                        fill="current"></path>
+                                </svg>
+                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
+                                        fill="current"></path>
+                                </svg>
+                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
+                                        fill="current"></path>
+                                </svg>
+                                (22,540)
+                            </div>
+
+
+                            <!-- 장바구니 좋아요버튼 -->
+                            <button onclick="addToCart(this)"> 장바구니 추가</button>
+                            <button class="like-button" onclick="toggleLike(this)"> </button>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </section>
+
+        </main>
+        <footer></footer>
+    </div>
+</body>
+
+</html>

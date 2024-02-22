@@ -1,0 +1,377 @@
+@charset "utf-8";
+
+// main color 
+$primary_color : #FF4081;
+$grid : 1440px;
+
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+li,
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+body {
+    padding: 0 240px 0;
+    // width: $grid;
+
+    // margin: 0 auto;
+    font-family: arial;
+    // background-color: #f7f7f7;
+    background-color: #fff;
+}
+
+// header
+header {
+    // width: 100%;
+    height: 100px;
+    position: fixed;
+    background-color: #fff;
+
+
+    .headerInner {
+        width: $grid;
+        margin: 0 auto;
+        height: 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+header .headerInner {
+    h1.logo {
+        width: 25%
+    }
+
+    .searchTab {
+        width: 50%;
+        height: 48px;
+        border: 2px solid $primary_color;
+        border-radius: 50px;
+        background-color: #fff;
+
+        input {
+            width: 600px;
+            height: 48px;
+            border-radius: 50px;
+            background-color: #fff;
+            border: none;
+            margin-left: 10px;
+            outline: none;
+            color: #ddd;
+            font-size: 14px;
+        }
+
+        .searchPage {
+            margin-top: 10px;
+            width: 100%;
+            // height: 300px;
+            padding: 20px 10px;
+            border: 2px solid $primary_color;
+            background-color: #fff;
+            display: none;
+
+            .searchTextCover {
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+            }
+
+            ol {
+                li {
+                    margin-top: 10px;
+                    border-bottom: 1px solid #ddd;
+                }
+            }
+        }
+
+    }
+}
+
+header .headerInner {
+    .nav_list {
+        width: 25%;
+        display: flex;
+        justify-content: flex-end;
+        gap: 20px;
+
+
+        img {
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+        }
+    }
+}
+
+// mainBanner
+main section#mainBanner {
+    padding-top: 150px;
+    width: 100%;
+
+    .mainBanner_list {
+        width: $grid;
+        margin: 0 auto;
+        display: flex;
+        height: 700px;
+
+        img {
+            width: $grid;
+            height: 600px;
+
+        }
+    }
+
+}
+
+// 중간 배너
+main section#banner {
+    width: $grid;
+    height: 111px;
+    overflow: hidden;
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    gap: 20px;
+    // background-color: #000;
+    margin-bottom: 20px;
+
+    .banner {
+        background: url(../images/banner.jpeg) no-repeat center/contain;
+        width: 80%;
+        height: 240px;
+    }
+
+    .membership {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        // gap: 10px;
+        img {
+            width: 23%;
+            height: auto;
+        }
+    }
+}
+
+// section#mainProduct
+main section#mainProduct {
+    // width: $grid;
+    // padding: 0 240px 0;
+    // margin: 0 auto;
+    background-color: #fff;
+}
+
+// cart
+#nav {
+    display: flex;
+    width: 100%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    justify-content: space-between;
+    display: none;
+
+    // width: 400px;
+    // height: 500px;
+    // display: none;
+    .logo {
+        opacity: 0;
+
+        img {
+            width: 150px;
+            margin-top: 15px;
+            margin-left: 30px;
+        }
+    }
+
+
+
+
+    button#clear-cart {
+        background-color: #ff40809d;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        margin: 20px 0 20px 0;
+
+        &:hover {
+            background-color: $primary_color;
+        }
+
+    }
+
+    ul#clear-items {
+        list-style: none;
+        padding: 0;
+    }
+}
+
+#cart {
+    width: 70vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 150px;
+    padding-left: 50px;
+}
+
+
+
+// 제품
+section#mainProduct .product-container {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    // grid-template-columns 열의 크기 정의
+    // auto fill - 컨테이너에 맞춰 자동으로 열 채움
+    // minmax - 최소와 최대 사이즈 정의 함수
+    // fr -fraction - 사용 가능한 공간을 동등한 비율로 나눔을 의미
+    // 1fr - 첫번째 열 / 2fr 두번째 열
+
+
+
+    .product {
+        overflow: hidden;
+        border-radius: 5px;
+        background-color: #fff;
+        // border: 1px solid #ddd;
+        // background-color: red;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+
+        // 제품이미지
+        img {
+            border-radius: 20px;
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+        }
+
+        // 제품내용
+        .product-details {
+            padding: 20px;
+        }
+
+    }
+
+}
+
+section#mainProduct .product-container .product .product-details {
+    h2 {
+        margin-top: 0px;
+        margin-bottom: 10px;
+        font-size: 17px;
+        font-weight: normal;
+    }
+
+    p.price {
+        font-size: 25px;
+        font-weight: bold;
+        color: #000;
+        margin-bottom: 20px;
+
+
+    }
+
+    span {
+        font-weight: normal;
+        font-size: 15px;
+        color: #999;
+
+    }
+
+    span.red {
+        color: $primary_color;
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    button {
+        cursor: pointer;
+        padding: 10px 20px;
+        border-radius: 5px;
+        margin-bottom: 5px;
+        margin-right: 2px;
+
+        &:nth-of-type(1) {
+            background-color: #ff40809d;
+            color: #fff;
+
+            border: none;
+
+
+
+            &:hover {
+                background-color: $primary_color;
+            }
+        }
+
+    }
+
+}
+
+button.like-button {
+    // background:url(../images/likebtn.svg) no-repeat center/contain;
+    background-image: url(../images/likebtn.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-color: transparent;
+    opacity: 0.5;
+
+    // color: #fff;
+    padding-left: 5px;
+    width: 30px;
+    height: 30px;
+    border: none;
+    outline: none;
+
+    &:hover {
+        // background: url(../images/likebtnAfter.svg);
+        // background-repeat: no-repeat;
+        // background-size: contain;
+        // background-position: center;
+        // background-color: transparent;
+        opacity: 1;
+    }
+}
+
+button.unlike-button {
+    background-image: url(../images/likebtnAfter.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-color: transparent;
+    padding-left: 5px;
+    width: 30px;
+    height: 30px;
+    border: none;
+    outline: none;
+}
+
+
+
+
+@media (max-width:760px) {
+    section#mainProduct .product-container {
+        grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+    }
+}
