@@ -95,6 +95,7 @@ function addToCart(button) {
         // 제품 가격을 총 가격에 더하기
 
         // 숫자가 아닌 문자열을 매칭하는 정규식
+
         let regex = /[^0-9]/g;
         // 원래 문자열에서 숫자가 아닌 모든 문자열을 빈 문자로 변경
         let result = productPrice.replace(regex, "");
@@ -129,8 +130,8 @@ function addToCart(button) {
     }
     // 총가격 업데이트 함수
     function updateTotalPrice() {
-        
-        listTotalPrice.append(totalPrice + '원');
+
+        listTotalPrice.textContent = totalPrice + '원';
     }
 
 
@@ -142,9 +143,10 @@ function clearCart() {
     cartItems.innerHTML = ''; //모든 자식요소 삭제
     const listTotalPrice = document.getElementById('total');
     // 합계금액 0원으로 초기화
-    totalPrice = 0;
-    listTotalPrice.remove(0);
-    listTotalPrice.append(totalPrice + '원');
+    totalPrice -= totalPrice;
+    // listTotalPrice.remove();
+    console.log(totalPrice)
+    listTotalPrice.textContent =totalPrice + '원';
 }
 
 

@@ -3,6 +3,9 @@
 // main color 
 $primary_color : #FF4081;
 $grid : 1440px;
+$footer :#FAFAFA;
+
+// BEEDEF ;; F4EDED
 
 /* reset */
 * {
@@ -23,7 +26,7 @@ a {
 }
 
 body {
-    padding: 0 240px 0;
+   
     // width: $grid;
 
     // margin: 0 auto;
@@ -39,32 +42,38 @@ header {
     position: fixed;
     background-color: #fff;
     z-index: 999;
+    border-bottom: 1px solid $primary_color;
+    
 
 
     .headerInner {
-        width: $grid;
-        margin: 0 auto;
-        height: 100px;
         display: flex;
+        margin: 0 auto;
+        width: $grid;
+        height: 100px;
+        
         justify-content: space-between;
         align-items: center;
+        // gap: 20px;
+        // grid-template-columns: 1fr 1fr 1fr;
     }
 }
 
 header .headerInner {
     h1.logo {
-        width: 25%
+        width: 10%
+        
     }
 
     .searchTab {
-        width: 50%;
+       width: 50%;
         height: 48px;
         border: 2px solid $primary_color;
         border-radius: 50px;
         background-color: #fff;
 
         input {
-            width: 600px;
+            
             height: 48px;
             border-radius: 50px;
             background-color: #fff;
@@ -103,7 +112,7 @@ header .headerInner {
 
 header .headerInner {
     .nav_list {
-        width: 25%;
+       width: 10%;
         display: flex;
         justify-content: flex-end;
         gap: 20px;
@@ -118,22 +127,44 @@ header .headerInner {
 }
 
 // mainBanner
+main section:not(#mainBanner){
+    padding: 0 240px 0;
+}
 main section#mainBanner {
     padding-top: 150px;
     width: 100%;
 
-    .mainBanner_list {
+
+    .swiper-container {
         width: $grid;
         margin: 0 auto;
-        display: flex;
-        height: 700px;
+        overflow: hidden;
+        position: relative;
 
-        img {
+        .swiper-wrapper {
             width: $grid;
-            height: 600px;
+            margin: 0 auto;
+            display: flex;
+            height: 700px;
 
+            img {
+                width: $grid;
+                height: 600px;
+
+            }
         }
     }
+
+}
+
+.swiper-notification {
+
+    z-index: 99999;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    width: 100px;
+    height: 100px;
 
 }
 
@@ -194,9 +225,9 @@ main section#mainProduct {
     text-align: left;
     z-index: 9999;
     transition: 0.5s;
-    width: 600px;
-    height: 100vh;
-    
+    width: 200px;
+    height: 400px;
+
     box-shadow: -3px 5px 10px rgba(0, 0, 0, 0.1);
 
     #cart {
@@ -334,6 +365,8 @@ section#mainProduct .product-container {
         // 제품내용
         .product-details {
             padding: 20px;
+
+         
         }
 
     }
@@ -443,6 +476,33 @@ button.unlike-button {
     outline: none;
 }
 
+
+// footer
+
+footer{
+    width: 100%;
+    height: 300px;
+    background-color: $footer;
+
+    .footerInner {
+        width: $grid;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+
+        .footerDetails{
+            width: 50%;
+        }
+        .contactUs{
+            width: 25%;
+        }
+        .sns{
+            width: 25%;
+            display: flex;
+            justify-content: end;;
+        }
+    }
+}
 
 
 
