@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> 주성훈 - Shopping Cart</title>
     <link rel="stylesheet" href="./style/style.css">
-
-    <script  src="./js/shop.js"></script>
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.0/css/all.css">
+    <script defer src="./js/shop.js"></script>
 </head>
 
 <body>
@@ -50,7 +50,7 @@
                 </div>
             </section>
             <section id="banner">
-                
+
                 <div class="membership">
                     <img src="./images/membership3.png" alt="">
                     <img src="./images/membership1.png" alt="">
@@ -63,31 +63,41 @@
             <section id="mainProduct">
                 <!-- 장바구니 -->
                 <div id="nav">
-                    <div class="logo">
-                        <a href="#"><img src="./images/logo_petfriends.png" alt="쿠팡로고"></a>
-                    </div>
+
                     <div id="cart">
                         <!-- <h2>장바구니</h2> -->
                         <!-- button#clear-cart -->
-                      
+
                         <!-- ul#clear-items -->
                         <ul id="clear-items">
                             <!-- 삭제처리된 li들이 들어옴 -->
                         </ul>
                         <button id="clear-cart" onclick="clearCart()">전체삭제</button>
+                        <ul class="account">
+                            <li>총 금액 :</li>
+                            <li id="total"> </li>
+
+                        </ul>
                     </div>
+                    <!-- xbtn -->
+                    <div id="xb"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="1.56525" width="14.757" height="2.21355" rx="1.10678" transform="rotate(45 1.56525 0)" fill="#FF4081"/>
+                        <rect x="0.707107" y="10.4348" width="13.757" height="1.21355" rx="0.606776" transform="rotate(-45 0.707107 10.4348)" fill="#FF4081" stroke="#FF4081"/>
+                        </svg></div>
                 </div>
 
                 <!-- 제품 -->
                 <div class="product-container">
                     <!-- 1 -->
                     <div class="product">
+                        <!-- 공유하기버튼 -->
+                        <button id="shareButton"><i class="fa-light fa-share-nodes"></i></button>
                         <img src="./images/product/product01.jpeg" alt="상품1">
                         <div class="product-details">
                             <h2>캣만두 라이프 에센셜 치킨 142g</h2>
                             <p class="price">
 
-                              
+
                                 <span class="red"></span>
                                 33,000원
                                 <span><del></del></span>
@@ -129,7 +139,7 @@
 
 
                             <!-- 장바구니 좋아요버튼 -->
-                            <button onclick="addToCart(this)"> 장바구니 추가</button>
+                            <button onclick="addToCart(this)" > 장바구니 추가</button>
                             <button class="like-button" onclick="toggleLike(this)"> </button>
                         </div>
                     </div>
@@ -238,7 +248,7 @@
                             <h2>캣만두 라이프 에센셜 치킨 리틀 142g</h2>
                             <p class="price">
 
-                              
+
                                 <span class="red"></span>
                                 33,000원
                                 <span><del></del></span>
@@ -832,6 +842,24 @@
         </main>
         <footer></footer>
     </div>
+
+    <script>
+        const shareButtons = document.querySelectorAll("#shareButton");
+        shareButtons.forEach(button => {
+            // .foreEach => 각 요소에 접근함
+            button.addEventListener('click', function(){
+                share()
+            });
+        });
+
+        // 공유함수
+        function share() {
+            alert("링크가 복사되었습니다 : https://m.pet-friends.co.kr/main/");
+        }
+
+
+    </script>
+    
 </body>
 
 </html>
