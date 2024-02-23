@@ -6,8 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> 주성훈 - Shopping Cart</title>
     <link rel="stylesheet" href="./style/style.css">
+    <!-- 스와이퍼 슬라이드css -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.0/css/all.css">
     <script defer src="./js/shop.js"></script>
+    <!-- 스와이퍼슬라이드 js -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </head>
 
 <body>
@@ -45,9 +49,21 @@
         </header>
         <main>
             <section id="mainBanner">
-                <div class="mainBanner_list">
-                    <img src="./images/swiper/banner01.png" alt="배너1">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="./images/swiper/banner01.png" alt="배너1"></div>
+                        <div class="swiper-slide"><img src="./images/swiper/banner02.png" alt="배너1"></div>
+                        <div class="swiper-slide"><img src="./images/swiper/banner03.png" alt="배너1"></div>
+                        <div class="swiper-slide"><img src="./images/swiper/banner04.png" alt="배너1"></div>
+                        <div class="swiper-slide"><img src="./images/swiper/banner05.png" alt="배너1"></div>
+                        <div class="swiper-slide"><img src="./images/swiper/banner06.png" alt="배너1"></div>
+                        <!-- <div class="swiper-slide"><img src="./images/swiper/banner07.png" alt="배너1"></div> -->
+                        <!-- <div class="swiper-slide"><img src="./images/swiper/banner08.png" alt="배너1"></div> -->
+
+                    </div>
                 </div>
+
+
             </section>
             <section id="banner">
 
@@ -80,9 +96,12 @@
                         </ul>
                     </div>
                     <!-- xbtn -->
-                    <div id="xb"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="1.56525" width="14.757" height="2.21355" rx="1.10678" transform="rotate(45 1.56525 0)" fill="#FF4081"/>
-                        <rect x="0.707107" y="10.4348" width="13.757" height="1.21355" rx="0.606776" transform="rotate(-45 0.707107 10.4348)" fill="#FF4081" stroke="#FF4081"/>
+                    <div id="xb"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <rect x="1.56525" width="14.757" height="2.21355" rx="1.10678"
+                                transform="rotate(45 1.56525 0)" fill="#FF4081" />
+                            <rect x="0.707107" y="10.4348" width="13.757" height="1.21355" rx="0.606776"
+                                transform="rotate(-45 0.707107 10.4348)" fill="#FF4081" stroke="#FF4081" />
                         </svg></div>
                 </div>
 
@@ -103,44 +122,46 @@
                                 <span><del></del></span>
 
                             </p>
-                            <div class="stars">
-                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
-                                        fill="current"></path>
-                                </svg>
-                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
-                                        fill="current"></path>
-                                </svg>
-                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
-                                        fill="current"></path>
-                                </svg>
-                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
-                                        fill="current"></path>
-                                </svg>
-                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
-                                        fill="current"></path>
-                                </svg>
-                                (22,540)
+                            <div class="btncontain">
+                                <div class="stars">
+                                    <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
+                                            fill="current"></path>
+                                    </svg>
+                                    <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
+                                            fill="current"></path>
+                                    </svg>
+                                    <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
+                                            fill="current"></path>
+                                    </svg>
+                                    <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
+                                            fill="current"></path>
+                                    </svg>
+                                    <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
+                                            fill="current"></path>
+                                    </svg>
+                                    (22,540)
+                                </div>
+
+
+                                <!-- 장바구니 좋아요버튼 -->
+                                <button onclick="addToCart(this)"> 장바구니 추가</button>
+                                <button class="like-button" onclick="toggleLike(this)"> </button>
                             </div>
-
-
-                            <!-- 장바구니 좋아요버튼 -->
-                            <button onclick="addToCart(this)" > 장바구니 추가</button>
-                            <button class="like-button" onclick="toggleLike(this)"> </button>
                         </div>
                     </div>
                     <!-- 2 -->
@@ -744,6 +765,7 @@
                                 8,500원
                                 <span><del> 14,000원</del></span>
                             </p>
+
                             <div class="stars">
                                 <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -840,14 +862,43 @@
             </section>
 
         </main>
-        <footer></footer>
+        <footer>
+            <div class="footerInner">
+                <div class="footerDetails">
+                    <p><strong>(주)펫프렌즈</strong></p>
+                    <p>대표이사 : 윤현신 / 서울특별시 강남구 도산대로4길 15,큐브타워</p>
+                    <p>사업자번호 : 175-81-001900 / 통신판매업 : 제2019-서울강남-04113호</p>
+                    <p>개인정보보호책임자 : 윤현신 / 구매안접(에스크로)서비스</p>
+
+                </div>
+                <div class="info">
+                    <ul>
+                        <li>이용약관</li>
+                        <li>개인정보처리방침</li>
+                        <li>회사소개</li>
+                    </ul>
+                </div>
+                <div class="contactUS">
+                    <ul>
+                        <li>02-511-6381</li>
+                        <li>cs@pet-friends.co.kr</li>
+                    </ul>
+                </div>
+                <div class="sns">
+                    <ul>
+                        <li>fb</li>
+                        <li>insta</li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
     </div>
 
     <script>
         const shareButtons = document.querySelectorAll("#shareButton");
         shareButtons.forEach(button => {
             // .foreEach => 각 요소에 접근함
-            button.addEventListener('click', function(){
+            button.addEventListener('click', function () {
                 share()
             });
         });
@@ -858,8 +909,26 @@
         }
 
 
+        // swiper 슬라이드
+        const mySwiper = new Swiper('.swiper-container', {
+            direction: 'horizontal',
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'bullets'
+            },
+            navigation: {
+
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            autoplay: {
+                delay: 3000
+            },
+
+        });
     </script>
-    
+
 </body>
 
 </html>
