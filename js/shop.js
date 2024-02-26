@@ -1,4 +1,155 @@
+$(function () {
+    // 탭버튼
+    /* 
+        카테고리 탭매뉴 ul li 를 tab 변수설정 
+        
+
+        변수를 클릭할때 이벤트 발생 
+
+        클릭한 li에 tabOn class 추가 tab 제거
+
+        형제들 요소에 tabOn 제거 후 tab추가
+        
+    */
+    let tab = $("#tab li");
+    tab.on("click", function () {
+        $(this).addClass("tabOn");
+        $(this).removeClass("tab");
+        $(this).siblings().removeClass("tabOn");
+        $(this).siblings().addClass("tab");
+
+        // 내용 변경
+
+    });
+
+    let sausage = $(".sausage");
+    sausage.on("click", function () {
+        let img01 = $(".produceMenu01 img");
+        let popularProduct01 = $(".produceMenu01 h3");
+        let red01 = $(".produceMenu01 .red strong");
+        let discoutPrice01 = $(".produceMenu01 span");
+        let ea01 = $(".produceMenu01 .ea")
+        img01.attr("src", "./images/popularProduct/petmorningchicken.jpeg");
+        popularProduct01.text("[30개] 펫모닝 닭가슴살 22g");
+        red01.text("33%");
+        discoutPrice01.text("12,000원");
+        ea01.text("개당 400원 (30개묶음 구매시)");
+
+        let img02 = $(".produceMenu02 img");
+        let popularProduct02 = $(".produceMenu02 h3");
+        let red02 = $(".produceMenu02 .red strong");
+        let discoutPrice02 = $(".produceMenu02 span");
+        let ea02 = $(".produceMenu02 .ea")
+        img02.attr("src", "./images/popularProduct/wowdogche.jpeg");
+
+        popularProduct02.text("바우와우 독 치즈소세지");
+        red02.text("11%");
+        discoutPrice02.text("4,000원");
+        ea02.text("개당 4,000원(1개묶음 구매시)");
+
+        let img03 = $(".produceMenu03 img");
+        let popularProduct03 = $(".produceMenu03 h3");
+        let red03 = $(".produceMenu03 .red strong");
+        let discoutPrice03 = $(".produceMenu03 span");
+        let ea03 = $(".produceMenu03 .ea")
+        img03.attr("src", "./images/popularProduct/sticktype.jpeg");
+        popularProduct03.text("브리더랩 월간통살 닭가슴살 스틱타입 20g*30p");
+        red03.text("");
+        discoutPrice03.text("10,900원");
+        ea03.text("");
+
+    });
+    let bisket = $(".bisket");
+    bisket.on("click", function () {
+        let img01 = $(".produceMenu01 img");
+        let popularProduct01 = $(".produceMenu01 h3");
+        let red01 = $(".produceMenu01 .red strong");
+        let discoutPrice01 = $(".produceMenu01 span");
+        let ea01 = $(".produceMenu01 .ea")
+        img01.attr("src", "./images/popularProduct/vegetableMix.png");
+        popularProduct01.text("델리마켓 독 마이C리얼 야채믹스 100g");
+        red01.text("19%");
+        discoutPrice01.text("6,500원");
+        ea01.text("개당 5,500원(3개묶음 구매시)");
+
+        let img02 = $(".produceMenu02 img");
+        let popularProduct02 = $(".produceMenu02 h3");
+        let red02 = $(".produceMenu02 .red strong");
+        let discoutPrice02 = $(".produceMenu02 span");
+        let ea02 = $(".produceMenu02 .ea")
+        img02.attr("src", "images/popularProduct/candyChicken.jpeg");
+
+        popularProduct02.text("너를위한디저트 독 캔디 치킨맛 L 21g");
+        red02.text("17%");
+        discoutPrice02.text("5,000원");
+        ea02.text("개당 4,933원(12개묶음 구매시)");
+
+        let img03 = $(".produceMenu03 img");
+        let popularProduct03 = $(".produceMenu03 h3");
+        let red03 = $(".produceMenu03 .red strong");
+        let discoutPrice03 = $(".produceMenu03 span");
+        let ea03 = $(".produceMenu03 .ea")
+        img03.attr("src", "images/popularProduct/honeyCake.jpeg");
+        popularProduct03.text("도기맨 고구마 벌꿀 케익 100g");
+        red03.text("");
+        discoutPrice03.text("3,500원");
+        ea03.text("");
+    });
+    let can = $(".can");
+    can.on("click", function () {
+        let img01 = $(".produceMenu01 img");
+        let popularProduct01 = $(".produceMenu01 h3");
+        let red01 = $(".produceMenu01 .red strong");
+        let discoutPrice01 = $(".produceMenu01 span");
+        let ea01 = $(".produceMenu01 .ea")
+        img01.attr("src", "images/popularProduct/allinonepackage.jpeg");
+        popularProduct01.text("마이베프 별자리스틱 올인원패키지 15g*7p");
+        red01.text("2%");
+        discoutPrice01.text("5,900원");
+        ea01.text("");
+
+        let img02 = $(".produceMenu02 img");
+        let popularProduct02 = $(".produceMenu02 h3");
+        let red02 = $(".produceMenu02 .red strong");
+        let discoutPrice02 = $(".produceMenu02 span");
+        let ea02 = $(".produceMenu02 .ea")
+        img02.attr("src", "images/popularProduct/ilike.jpeg");
+
+        popularProduct02.text("조공 나 산양유 좋아해  15g 49");
+        red02.text("17%");
+        discoutPrice02.text("5,000원");
+        ea02.text("");
+
+        let img03 = $(".produceMenu03 img");
+        let popularProduct03 = $(".produceMenu03 h3");
+        let red03 = $(".produceMenu03 .red strong");
+        let discoutPrice03 = $(".produceMenu03 span");
+        let ea03 = $(".produceMenu03 .ea")
+        img03.attr("src", "images/popularProduct/yellowchicken.jpeg");
+        popularProduct03.text("조공 오키로스틱 옐로우 닭가슴살 14g*4p");
+        red03.text("20%");
+        discoutPrice03.text("3,200원");
+        ea03.text("");
+    });
+
+
+});
+
+
 window.onload = function () {
+    // 인기검색어 
+    let today = new Date();
+
+    let year = today.getFullYear();
+    let month = ('0' + (today.getMonth() + 1)).slice(-2);
+    let day = ('0' + today.getDate()).slice(-2);
+
+    let dateString = year + '년' + month + '월' + day + '일 기준';
+    let time = document.getElementById("time");
+    time.textContent = dateString;
+    console.log(time);
+
+
     // 검색영역에 focus시 영역등장
     let search = document.getElementById("searchBox");
     let serachPage = document.getElementById("searchPage");
@@ -30,6 +181,8 @@ window.onload = function () {
 
 
 };
+
+
 // 이미 리스트에 올라가있을때 알림창
 
 
@@ -76,7 +229,7 @@ function addToCart(button) {
     // 새로운 요소 생성 - 제품명과 가격을 리스트 아이템에 넣어줌
     if (!isExisting) {
         const listItem = document.createElement('li');
-        listItem.textContent = `${productName} - ${productPrice}`;
+        listItem.textContent = `${productName} | ${productPrice}`;
         // listItem.style.display = "inline";
         listItem.style.width = "600px"
         listItem.style.textAlign = "center"
@@ -146,7 +299,7 @@ function clearCart() {
     totalPrice -= totalPrice;
     // listTotalPrice.remove();
     console.log(totalPrice)
-    listTotalPrice.textContent =totalPrice + '원';
+    listTotalPrice.textContent = totalPrice + '원';
 }
 
 
