@@ -8,8 +8,10 @@
     <link rel="stylesheet" href="./style/style.css">
     <!-- 스와이퍼 슬라이드css -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <!-- 폰트어썸 -->
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.0/css/all.css">
     <script defer src="./js/shop.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <!-- 스와이퍼슬라이드 js -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </head>
@@ -20,30 +22,32 @@
             <div class="headerInner">
                 <h1 class="logo"><img src="./images/logo_petfriends.png" alt="펫프렌즈로고"></h1>
                 <div class="searchTab">
+                    <div class="searchBtn"><i class="fa-solid fa-magnifying-glass"></i></div>
                     <input type="text" id="searchBox" placeholder="어떤 상품을 찾으시나요?">
                     <div class="searchPage" id="searchPage">
-                        <h2>펫프 인기 검색어</h2>
+                        <h2>추천테마 </h2>
                         <div class="searchTextCover">
-                            <span>댕댕이들이 가장 많이 찾는 상품</sapn> <span>2024.02. 낮 12:00</span></div>
-                        <ol class="SearchOrder">
-                            <li>강아지옷</li>
-                            <li>스텔라앤츄이스</li>
-                            <li>페스룸</li>
-                            <li>호랑이</li>
-                            <li>터키츄</li>
-                            <li>트라이엄프</li>
-                            <li>배변패드</li>
-                            <li>요요쉬</li>
-                            <li>후코이단</li>
-                            <li>치약</li>
+                            <div><img src="./images/search/search_theme_bangsiri.png" alt="">
+                                <p>다른아이들은<br>뭘먹지?</p>
+                            </div>
+                            <div><img src="./images/search/search_theme_big_dog.png" alt="">
+                                <p>왕큰댕댕이들<br>모여라</p>
+                            </div>
+                            <div><img src="./images/search/search_theme_feed_sample.png" alt="">
+                                <p>한정수량<br>맘마샘플</p>
+                            </div>
+                            <div><img src="./images/search/search_theme_pf_only.png" alt="">
+                                <p> 펫프ONLY<br>단독판매</p>
+                            </div>
 
-                        </ol>
+                        </div>
+
 
                     </div>
                 </div>
                 <nav class="nav_list">
-                    <div class="my"><img src="./images/my.svg" alt=""></div>
-                    <div class="cart" id="cartBtn"><img src="./images/shop.svg" alt=""></div>
+                    <div class="my"><i class="fa-solid fa-dog"></i></div>
+                    <div class="cart" id="cartBtn"><i class="fa-solid fa-bag-shopping"></i></div>
                 </nav>
             </div>
         </header>
@@ -52,15 +56,24 @@
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide"><img src="./images/swiper/banner01.png" alt="배너1"></div>
-                        <div class="swiper-slide"><img src="./images/swiper/banner02.png" alt="배너1"></div>
-                        <div class="swiper-slide"><img src="./images/swiper/banner03.png" alt="배너1"></div>
-                        <div class="swiper-slide"><img src="./images/swiper/banner04.png" alt="배너1"></div>
-                        <div class="swiper-slide"><img src="./images/swiper/banner05.png" alt="배너1"></div>
-                        <div class="swiper-slide"><img src="./images/swiper/banner06.png" alt="배너1"></div>
+                        <div class="swiper-slide"><img src="./images/swiper/banner02.png" alt="배너2"></div>
+                        <div class="swiper-slide"><img src="./images/swiper/banner03.png" alt="배너3"></div>
+                        <div class="swiper-slide"><img src="./images/swiper/banner04.png" alt="배너4"></div>
+                        <div class="swiper-slide"><img src="./images/swiper/banner05.png" alt="배너5"></div>
+                        <div class="swiper-slide"><img src="./images/swiper/banner06.png" alt="배너6"></div>
                         <!-- <div class="swiper-slide"><img src="./images/swiper/banner07.png" alt="배너1"></div> -->
                         <!-- <div class="swiper-slide"><img src="./images/swiper/banner08.png" alt="배너1"></div> -->
 
+
+                        <!-- If we need navigation buttons -->
+
+
                     </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+
+                    <!-- <div class="swiper-scrollbar"></div> -->
                 </div>
 
 
@@ -77,6 +90,7 @@
                 <div class="banner"></div>
             </section>
             <section id="mainProduct">
+                <h2>내새꾸에게 <Strong>재구매율84%</Strong>를 보이는 간식이에요</h2>
                 <!-- 장바구니 -->
                 <div id="nav">
 
@@ -111,10 +125,14 @@
                     <div class="product">
                         <!-- 공유하기버튼 -->
                         <button id="shareButton"><i class="fa-light fa-share-nodes"></i></button>
+                        <!-- 공유하기버튼 -->
+                        <button id="shareButton"><i class="fa-light fa-share-nodes"></i></button>
                         <img src="./images/product/product01.jpeg" alt="상품1">
+
                         <div class="product-details">
                             <h2>캣만두 라이프 에센셜 치킨 142g</h2>
                             <p class="price">
+
 
 
                                 <span class="red"></span>
@@ -124,48 +142,26 @@
                             </p>
                             <div class="btncontain">
                                 <div class="stars">
-                                    <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
-                                            fill="current"></path>
-                                    </svg>
-                                    <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
-                                            fill="current"></path>
-                                    </svg>
-                                    <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
-                                            fill="current"></path>
-                                    </svg>
-                                    <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
-                                            fill="current"></path>
-                                    </svg>
-                                    <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
-                                            fill="current"></path>
-                                    </svg>
+                                    <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                            class="fa-solid fa-star"></i></p>
                                     (22,540)
                                 </div>
 
 
                                 <!-- 장바구니 좋아요버튼 -->
-                                <button onclick="addToCart(this)"> 장바구니 추가</button>
-                                <button class="like-button" onclick="toggleLike(this)"> </button>
+                                <div class="buttonCover">
+                                    <button onclick="addToCart(this)"> 장바구니 추가</button>
+
+                                    <button class="like-button" onclick="toggleLike(this)"> </button>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <!-- 2 -->
                     <div class="product">
+                        <!-- 공유하기버튼 -->
+                        <button id="shareButton"><i class="fa-light fa-share-nodes"></i></button>
                         <img src="./images/product/product02.gif" alt="상품1">
                         <div class="product-details">
                             <h2>[어워즈]촉촉트릿 북어 80g</h2>
@@ -175,46 +171,23 @@
                                 <span><del> 15,000원</del></span>
                             </p>
                             <div class="stars">
-                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
-                                        fill="current"></path>
-                                </svg>
-                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
-                                        fill="current"></path>
-                                </svg>
-                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
-                                        fill="current"></path>
-                                </svg>
-                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
-                                        fill="current"></path>
-                                </svg>
-                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
-                                        fill="current"></path>
-                                </svg>
+                                <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i></p>
                                 (22,540)
                             </div>
 
 
                             <!-- 장바구니 좋아요버튼 -->
-                            <button onclick="addToCart(this)"> 장바구니 추가</button>
-                            <button class="like-button" onclick="toggleLike(this)"> </button>
+                            <div class="buttonCover">
+                                <button onclick="addToCart(this)"> 장바구니 추가</button>
+                                <button class="like-button" onclick="toggleLike(this)"> </button>
+                            </div>
                         </div>
                     </div>
                     <div class="product">
+                        <!-- 공유하기버튼 -->
+                        <button id="shareButton"><i class="fa-light fa-share-nodes"></i></button>
                         <img src="./images/product/product03.jpeg" alt="상품1">
                         <div class="product-details">
                             <h2>호랑이 간식 27종[모음]</h2>
@@ -224,46 +197,23 @@
                                 <span><del> 14,000원</del></span>
                             </p>
                             <div class="stars">
-                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
-                                        fill="current"></path>
-                                </svg>
-                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
-                                        fill="current"></path>
-                                </svg>
-                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
-                                        fill="current"></path>
-                                </svg>
-                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
-                                        fill="current"></path>
-                                </svg>
-                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
-                                        fill="current"></path>
-                                </svg>
+                                <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i></p>
                                 (22,540)
                             </div>
 
 
                             <!-- 장바구니 좋아요버튼 -->
-                            <button onclick="addToCart(this)"> 장바구니 추가</button>
-                            <button class="like-button" onclick="toggleLike(this)"> </button>
+                            <div class="buttonCover">
+                                <button onclick="addToCart(this)"> 장바구니 추가</button>
+                                <button class="like-button" onclick="toggleLike(this)"> </button>
+                            </div>
                         </div>
                     </div>
                     <div class="product">
+                        <!-- 공유하기버튼 -->
+                        <button id="shareButton"><i class="fa-light fa-share-nodes"></i></button>
                         <img src="./images/product/product04.jpeg" alt="상품1">
                         <div class="product-details">
                             <h2>캣만두 라이프 에센셜 치킨 리틀 142g</h2>
@@ -275,46 +225,23 @@
                                 <span><del></del></span>
                             </p>
                             <div class="stars">
-                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
-                                        fill="current"></path>
-                                </svg>
-                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
-                                        fill="current"></path>
-                                </svg>
-                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
-                                        fill="current"></path>
-                                </svg>
-                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
-                                        fill="current"></path>
-                                </svg>
-                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
-                                        fill="current"></path>
-                                </svg>
+                                <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i></p>
                                 (22,540)
                             </div>
 
 
                             <!-- 장바구니 좋아요버튼 -->
-                            <button onclick="addToCart(this)"> 장바구니 추가</button>
-                            <button class="like-button" onclick="toggleLike(this)"> </button>
+                            <div class="buttonCover">
+                                <button onclick="addToCart(this)"> 장바구니 추가</button>
+                                <button class="like-button" onclick="toggleLike(this)"> </button>
+                            </div>
                         </div>
                     </div>
                     <div class="product">
+                        <!-- 공유하기버튼 -->
+                        <button id="shareButton"><i class="fa-light fa-share-nodes"></i></button>
                         <img src="./images/product/product05.jpeg" alt="상품1">
                         <div class="product-details">
                             <h2>마도로스펫 북어트릿 120g</h2>
@@ -325,46 +252,23 @@
 
                             </p>
                             <div class="stars">
-                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
-                                        fill="current"></path>
-                                </svg>
-                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
-                                        fill="current"></path>
-                                </svg>
-                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
-                                        fill="current"></path>
-                                </svg>
-                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
-                                        fill="current"></path>
-                                </svg>
-                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
-                                        fill="current"></path>
-                                </svg>
+                                <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i></p>
                                 (22,540)
                             </div>
 
 
                             <!-- 장바구니 좋아요버튼 -->
-                            <button onclick="addToCart(this)"> 장바구니 추가</button>
-                            <button class="like-button" onclick="toggleLike(this)"> </button>
+                            <div class="buttonCover">
+                                <button onclick="addToCart(this)"> 장바구니 추가</button>
+                                <button class="like-button" onclick="toggleLike(this)"> </button>
+                            </div>
                         </div>
                     </div>
                     <div class="product">
+                        <!-- 공유하기버튼 -->
+                        <button id="shareButton"><i class="fa-light fa-share-nodes"></i></button>
                         <img src="./images/product/product06.jpeg" alt="상품1">
                         <div class="product-details">
                             <h2>[어워즈]본앤츄 위클리팩 터키츄 소고기힘줄 라운드타입 15g 7p</h2>
@@ -374,46 +278,23 @@
                                 <span><del> 8,000원</del></span>
                             </p>
                             <div class="stars">
-                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
-                                        fill="current"></path>
-                                </svg>
-                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
-                                        fill="current"></path>
-                                </svg>
-                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
-                                        fill="current"></path>
-                                </svg>
-                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
-                                        fill="current"></path>
-                                </svg>
-                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
-                                        fill="current"></path>
-                                </svg>
+                                <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i></p>
                                 (22,540)
                             </div>
 
 
                             <!-- 장바구니 좋아요버튼 -->
-                            <button onclick="addToCart(this)"> 장바구니 추가</button>
-                            <button class="like-button" onclick="toggleLike(this)"> </button>
+                            <div class="buttonCover">
+                                <button onclick="addToCart(this)"> 장바구니 추가</button>
+                                <button class="like-button" onclick="toggleLike(this)"> </button>
+                            </div>
                         </div>
                     </div>
                     <div class="product">
+                        <!-- 공유하기버튼 -->
+                        <button id="shareButton"><i class="fa-light fa-share-nodes"></i></button>
                         <img src="./images/product/product07.webp" alt="상품1">
                         <div class="product-details">
                             <h2>메디멀 독 치카잼 관절 대용량 15g*25p</h2>
@@ -423,46 +304,23 @@
                                 <span><del> 40,000원</del></span>
                             </p>
                             <div class="stars">
-                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
-                                        fill="current"></path>
-                                </svg>
-                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
-                                        fill="current"></path>
-                                </svg>
-                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
-                                        fill="current"></path>
-                                </svg>
-                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
-                                        fill="current"></path>
-                                </svg>
-                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
-                                        fill="current"></path>
-                                </svg>
+                                <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i></p>
                                 (22,540)
                             </div>
 
 
                             <!-- 장바구니 좋아요버튼 -->
-                            <button onclick="addToCart(this)"> 장바구니 추가</button>
-                            <button class="like-button" onclick="toggleLike(this)"> </button>
+                            <div class="buttonCover">
+                                <button onclick="addToCart(this)"> 장바구니 추가</button>
+                                <button class="like-button" onclick="toggleLike(this)"> </button>
+                            </div>
                         </div>
                     </div>
                     <div class="product">
+                        <!-- 공유하기버튼 -->
+                        <button id="shareButton"><i class="fa-light fa-share-nodes"></i></button>
                         <img src="./images/product/product08.webp" alt="상품1">
                         <div class="product-details">
                             <h2>알로 가득찬 동결건조 간식 촉촉트릿 열빙어 20g</h2>
@@ -472,46 +330,23 @@
                                 <span><del> 5,500원</del></span>
                             </p>
                             <div class="stars">
-                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
-                                        fill="current"></path>
-                                </svg>
-                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
-                                        fill="current"></path>
-                                </svg>
-                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
-                                        fill="current"></path>
-                                </svg>
-                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
-                                        fill="current"></path>
-                                </svg>
-                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
-                                        fill="current"></path>
-                                </svg>
+                                <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i></p>
                                 (22,540)
                             </div>
 
 
                             <!-- 장바구니 좋아요버튼 -->
-                            <button onclick="addToCart(this)"> 장바구니 추가</button>
-                            <button class="like-button" onclick="toggleLike(this)"> </button>
+                            <div class="buttonCover">
+                                <button onclick="addToCart(this)"> 장바구니 추가</button>
+                                <button class="like-button" onclick="toggleLike(this)"> </button>
+                            </div>
                         </div>
                     </div>
                     <div class="product">
+                        <!-- 공유하기버튼 -->
+                        <button id="shareButton"><i class="fa-light fa-share-nodes"></i></button>
                         <img src="./images/product/product09.jpeg" alt="상품1">
                         <div class="product-details">
                             <h2>[ONLY펫프] 인트라젠 영양제 위장&면역 50p</h2>
@@ -521,46 +356,23 @@
                                 <span><del> 18,000원</del></span>
                             </p>
                             <div class="stars">
-                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
-                                        fill="current"></path>
-                                </svg>
-                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
-                                        fill="current"></path>
-                                </svg>
-                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
-                                        fill="current"></path>
-                                </svg>
-                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
-                                        fill="current"></path>
-                                </svg>
-                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
-                                        fill="current"></path>
-                                </svg>
+                                <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i></p>
                                 (22,540)
                             </div>
 
 
                             <!-- 장바구니 좋아요버튼 -->
-                            <button onclick="addToCart(this)"> 장바구니 추가</button>
-                            <button class="like-button" onclick="toggleLike(this)"> </button>
+                            <div class="buttonCover">
+                                <button onclick="addToCart(this)"> 장바구니 추가</button>
+                                <button class="like-button" onclick="toggleLike(this)"> </button>
+                            </div>
                         </div>
                     </div>
                     <div class="product">
+                        <!-- 공유하기버튼 -->
+                        <button id="shareButton"><i class="fa-light fa-share-nodes"></i></button>
                         <img src="./images/product/product14.jpeg" alt="상품1">
                         <div class="product-details">
                             <h2>진짜육포 12종[모음]</h2>
@@ -570,46 +382,23 @@
                                 <span><del> 10,000원</del></span>
                             </p>
                             <div class="stars">
-                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
-                                        fill="current"></path>
-                                </svg>
-                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
-                                        fill="current"></path>
-                                </svg>
-                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
-                                        fill="current"></path>
-                                </svg>
-                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
-                                        fill="current"></path>
-                                </svg>
-                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
-                                        fill="current"></path>
-                                </svg>
+                                <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i></p>
                                 (22,540)
                             </div>
 
 
                             <!-- 장바구니 좋아요버튼 -->
-                            <button onclick="addToCart(this)"> 장바구니 추가</button>
-                            <button class="like-button" onclick="toggleLike(this)"> </button>
+                            <div class="buttonCover">
+                                <button onclick="addToCart(this)"> 장바구니 추가</button>
+                                <button class="like-button" onclick="toggleLike(this)"> </button>
+                            </div>
                         </div>
                     </div>
                     <div class="product">
+                        <!-- 공유하기버튼 -->
+                        <button id="shareButton"><i class="fa-light fa-share-nodes"></i></button>
                         <img src="./images/product/product11.png" alt="상품1">
                         <div class="product-details">
                             <h2>포켄스 덴티페어리 독 디스펜서 소형견용 S 80p</h2>
@@ -619,46 +408,23 @@
                                 <span><del> 34,200원</del></span>
                             </p>
                             <div class="stars">
-                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
-                                        fill="current"></path>
-                                </svg>
-                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
-                                        fill="current"></path>
-                                </svg>
-                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
-                                        fill="current"></path>
-                                </svg>
-                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
-                                        fill="current"></path>
-                                </svg>
-                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
-                                        fill="current"></path>
-                                </svg>
+                                <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i></p>
                                 (22,540)
                             </div>
 
 
                             <!-- 장바구니 좋아요버튼 -->
-                            <button onclick="addToCart(this)"> 장바구니 추가</button>
-                            <button class="like-button" onclick="toggleLike(this)"> </button>
+                            <div class="buttonCover">
+                                <button onclick="addToCart(this)"> 장바구니 추가</button>
+                                <button class="like-button" onclick="toggleLike(this)"> </button>
+                            </div>
                         </div>
                     </div>
                     <div class="product">
+                        <!-- 공유하기버튼 -->
+                        <button id="shareButton"><i class="fa-light fa-share-nodes"></i></button>
                         <img src="./images/product/product12.jpeg" alt="상품1">
                         <div class="product-details">
                             <h2>마이베프 별자리스틱 올인원패키지 15g*7p</h2>
@@ -668,46 +434,23 @@
                                 <span><del> 6,000원</del></span>
                             </p>
                             <div class="stars">
-                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
-                                        fill="current"></path>
-                                </svg>
-                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
-                                        fill="current"></path>
-                                </svg>
-                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
-                                        fill="current"></path>
-                                </svg>
-                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
-                                        fill="current"></path>
-                                </svg>
-                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
-                                        fill="current"></path>
-                                </svg>
+                                <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i></p>
                                 (22,540)
                             </div>
 
 
                             <!-- 장바구니 좋아요버튼 -->
-                            <button onclick="addToCart(this)"> 장바구니 추가</button>
-                            <button class="like-button" onclick="toggleLike(this)"> </button>
+                            <div class="buttonCover">
+                                <button onclick="addToCart(this)"> 장바구니 추가</button>
+                                <button class="like-button" onclick="toggleLike(this)"> </button>
+                            </div>
                         </div>
                     </div>
                     <div class="product">
+                        <!-- 공유하기버튼 -->
+                        <button id="shareButton"><i class="fa-light fa-share-nodes"></i></button>
                         <img src="./images/product/product12.webp" alt="상품1">
                         <div class="product-details">
                             <h2> 메디멀 독 가글츄 대용량 25p</h2>
@@ -717,46 +460,23 @@
                                 <span><del> 35,000원</del></span>
                             </p>
                             <div class="stars">
-                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
-                                        fill="current"></path>
-                                </svg>
-                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
-                                        fill="current"></path>
-                                </svg>
-                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
-                                        fill="current"></path>
-                                </svg>
-                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
-                                        fill="current"></path>
-                                </svg>
-                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
-                                        fill="current"></path>
-                                </svg>
+                                <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i></p>
                                 (22,540)
                             </div>
 
 
                             <!-- 장바구니 좋아요버튼 -->
-                            <button onclick="addToCart(this)"> 장바구니 추가</button>
-                            <button class="like-button" onclick="toggleLike(this)"> </button>
+                            <div class="buttonCover">
+                                <button onclick="addToCart(this)"> 장바구니 추가</button>
+                                <button class="like-button" onclick="toggleLike(this)"> </button>
+                            </div>
                         </div>
                     </div>
                     <div class="product">
+                        <!-- 공유하기버튼 -->
+                        <button id="shareButton"><i class="fa-light fa-share-nodes"></i></button>
                         <img src="./images/product/product10.jpeg" alt="상품1">
                         <div class="product-details">
                             <h2>강아지 촉촉트릿 13종 [모음]</h2>
@@ -767,46 +487,23 @@
                             </p>
 
                             <div class="stars">
-                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
-                                        fill="current"></path>
-                                </svg>
-                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
-                                        fill="current"></path>
-                                </svg>
-                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
-                                        fill="current"></path>
-                                </svg>
-                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
-                                        fill="current"></path>
-                                </svg>
-                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
-                                        fill="current"></path>
-                                </svg>
+                                <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i></p>
                                 (22,540)
                             </div>
 
 
                             <!-- 장바구니 좋아요버튼 -->
-                            <button onclick="addToCart(this)"> 장바구니 추가</button>
-                            <button class="like-button" onclick="toggleLike(this)"> </button>
+                            <div class="buttonCover">
+                                <button onclick="addToCart(this)"> 장바구니 추가</button>
+                                <button class="like-button" onclick="toggleLike(this)"> </button>
+                            </div>
                         </div>
                     </div>
                     <div class="product">
+                        <!-- 공유하기버튼 -->
+                        <button id="shareButton"><i class="fa-light fa-share-nodes"></i></button>
                         <img src="./images/product/product15.jpeg" alt="상품1">
                         <div class="product-details">
                             <h2>[특가할인] 호랑이 덴탈 플라그껌 40p</h2>
@@ -816,43 +513,18 @@
                                 <span><del> 14,000원</del></span>
                             </p>
                             <div class="stars">
-                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
-                                        fill="current"></path>
-                                </svg>
-                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
-                                        fill="current"></path>
-                                </svg>
-                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
-                                        fill="current"></path>
-                                </svg>
-                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
-                                        fill="current"></path>
-                                </svg>
-                                <svg fill="#ffc700" height="12" viewBox="0 0 48 48" width="12"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M24.004 3L30.4913 16.8264L45 19.044L34.502 29.8044L36.9787 45L24.004 37.8264L11.0213 45L13.498 29.8044L3 19.044L17.5087 16.8264L24.004 3Z"
-                                        fill="current"></path>
-                                </svg>
+                                <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i></p>
                                 (22,540)
                             </div>
 
 
                             <!-- 장바구니 좋아요버튼 -->
-                            <button onclick="addToCart(this)"> 장바구니 추가</button>
-                            <button class="like-button" onclick="toggleLike(this)"> </button>
+                            <div class="buttonCover">
+                                <button onclick="addToCart(this)"> 장바구니 추가</button>
+                                <button class="like-button" onclick="toggleLike(this)"> </button>
+                            </div>
                         </div>
                     </div>
 
@@ -860,6 +532,522 @@
 
                 </div>
             </section>
+            <section id="popular">
+                <article class="choice">
+                    <div class="textCover">
+                        <h2>평점 4.5이상! 심쿵팸들의 선택!</h2><span>더보기</span>
+                    </div>
+                    <div class="chioceProduct">
+                        <div class="chioceProductImg"><img src="./images/choiceProduct/img01.jpeg" alt="">
+                        </div>
+                        <div class="text">
+
+                            <div class="stars">
+                                <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i></p>
+                            </div>
+                            <h3>
+                                [어워즈]촉촉트릿 북어 80g
+                            </h3>
+                            <p>부드러운 간식 찾고 있어서 <br> 이걸로 구매해봣어요 잘먹네요</p>
+                        </div>
+                    </div>
+
+                </article>
+                <article class="category">
+                    <h2>카테고리 인기상품</h2>
+                    <div class="tabMenu">
+                        <ul id="tab">
+                            <li class="tabOn sausage">소시지</li>
+                            <li class="tab bisket">비스켓/쿠키</li>
+                            <li class="tab can">캔/파우치</li>
+
+                        </ul>
+                    </div>
+                    <div class="produceMenu">
+                        <ul>
+                            <!-- 1 -->
+                            <li class="produceMenu01">
+                                <img src="./images/popularProduct/petmorningchicken.jpeg" alt="">
+                                <div class="productDetails">
+                                    <h3>[30개] 펫모닝 닭가슴살 22g</h3>
+                                    <p class="red"><strong>33%</strong><span>12,000원</span></p>
+                                    <p class="ea">개당 400원 (30개묶음 구매시)</p>
+                                    <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                            class="fa-solid fa-star"></i></p>
+                                </div>
+                            </li>
+                            <!-- 2 -->
+                            <li class="produceMenu02">
+                                <img src="./images/popularProduct/wowdogche.jpeg" alt="">
+                                <!-- <img src="images/popularProduct/allinonepackage.jpeg" alt="">
+                                <img src="images/popularProduct/ilike.jpeg" alt="">
+                                <img src="images/popularProduct/yellowchicken.jpeg" alt=""> -->
+                                <div class="productDetails">
+                                    <h3>바우와우 독 치즈소세지</h3>
+                                    <p class="red"><strong>11%</strong><span>4,000원</span></p>
+                                    <p class="ea">개당 4000원 (1개묶음 구매시)</p>
+                                    <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                            class="fa-solid fa-star"></i></p>
+                                </div>
+                            </li>
+                            <!-- 3 -->
+                            <li class="produceMenu03">
+                                <img src="./images/popularProduct/sticktype.jpeg" alt="">
+                                <div class="productDetails">
+                                    <h3>브리더랩 월간통살 닭가슴살 스틱타입 20g*30p</h3>
+                                    <p class="red"><strong></strong><span>10,900원</span></p>
+                                    <p class="ea"></p>
+                                    <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                            class="fa-solid fa-star"></i></p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                </article>
+                <article class="popular_search">
+                    <h2>펫프 인기검색어</h2>
+                    <p id="time">2024.02. 낮 12:00</p>
+                    <ul class="popular_search_cover">
+                        <li><span class="order">1</span> <span>노즈워크 </span> <span>-</span></li>
+                        <li><span class="order">2</span> <span>트라이엄프 </span> <span>-</span></li>
+                        <li><span class="order">3</span> <span>칫솔 </span> <span class="high">급상승</span></li>
+                        <li><span class="order">4</span> <span>방석 </span> <span>-</span></li>
+                        <li><span class="order">5</span> <span>샘플 </span> <span class="high">급상승</span></li>
+                        <li><span class="order">6</span> <span>유통기한임박 </span> <span>-</span></li>
+                        <li><span class="order">7</span> <span>호랑이 </span> <span class="high">급상승</span></li>
+                        <li><span class="order">8</span> <span>껌 </span> <span>-</span></li>
+                        <li><span class="order">9</span> <span>하네스 </span> <span>-</span></li>
+                        <li><span class="order">10</span> <span>배변패드 </span> <span>-</span></li>
+                        <li><span class="order">11</span> <span>강아지 </span> <span class="New">New</span></li>
+                        <li><span class="order">12</span> <span>고양이 </span> <span class="New">New</span></li>
+                        <li><span class="order">13</span> <span>장난감 </span> <span class="New">New</span></li>
+                        <li><span class="order">14</span> <span>분리불안 </span> <span class="New">New</span></li>
+                    </ul>
+                </article>
+            </section>
+
+            <section id="newProduct">
+                <h2>Hot 신상</h2>
+
+                <div class="product-container">
+                    <!-- 1 -->
+                    <div class="product">
+                        <!-- 공유하기버튼 -->
+                        <button id="shareButton"><i class="fa-light fa-share-nodes"></i></button>
+                        <!-- 공유하기버튼 -->
+                        <button id="shareButton"><i class="fa-light fa-share-nodes"></i></button>
+
+                        <img src="./images/newProduct/01.jpg" alt="">
+                        <div class="product-details">
+                            <h2>[NEW신상][무료배송] 펫트리온 열빙어 트릿 70g</h2>
+                            <p class="price">
+
+
+                                <span class="red"></span>
+                                16,000원
+                                <span><del></del></span>
+
+                            </p>
+                            <div class="btncontain">
+                                <div class="stars">
+                                    <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                            class="fa-solid fa-star"></i></p>
+                                </div>
+
+
+                                <!-- 장바구니 좋아요버튼 -->
+                                <div class="buttonCover">
+                                    <button onclick="addToCart(this)"> 장바구니 추가</button>
+
+                                    <button class="like-button" onclick="toggleLike(this)"> </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 2 -->
+                    <div class="product">
+                        <!-- 공유하기버튼 -->
+                        <button id="shareButton"><i class="fa-light fa-share-nodes"></i></button>
+                        <img src="./images/newProduct/02.jpeg" alt="">
+                        <div class="product-details">
+                            <h2>[NEW신상]멍멍팔팔 짜먹는 조인트츄 14g*10p</h2>
+                            <p class="price">
+                                <span class="red">60%</span>
+                                19,800원
+                                <span><del> 50,000원</del></span>
+                            </p>
+                            <div class="stars">
+                                <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i></p>
+                                (22,540)
+                            </div>
+
+
+                            <!-- 장바구니 좋아요버튼 -->
+                            <div class="buttonCover">
+                                <button onclick="addToCart(this)"> 장바구니 추가</button>
+                                <button class="like-button" onclick="toggleLike(this)"> </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <!-- 공유하기버튼 -->
+                        <button id="shareButton"><i class="fa-light fa-share-nodes"></i></button>
+                        <img src="./images/newProduct/03.jpeg" alt="">
+                        <div class="product-details">
+                            <h2>[NEW신상] 그롤링 독 글로우 아이케어 살몬 1.8kg</h2>
+                            <p class="price">
+                                <span class="red">20%</span>
+                                23,200원
+                                <span><del> 29,000원</del></span>
+                            </p>
+                            <div class="stars">
+                                <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i></p>
+                                (22,540)
+                            </div>
+
+
+                            <!-- 장바구니 좋아요버튼 -->
+                            <div class="buttonCover">
+                                <button onclick="addToCart(this)"> 장바구니 추가</button>
+                                <button class="like-button" onclick="toggleLike(this)"> </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <!-- 공유하기버튼 -->
+                        <button id="shareButton"><i class="fa-light fa-share-nodes"></i></button>
+                        <img src="./images/newProduct/04.jpeg" alt="">
+                        <div class="product-details">
+                            <h2>[NEW신상]그롤링 독 글로우 힙앤조인트 치킨1.8kg</h2>
+                            <p class="price">
+                                <span class="red">20%</span>
+                                23,200원
+                                <span><del> 29,000원</del></span>
+                            </p>
+                            <div class="stars">
+                                <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i></p>
+                                (22,540)
+                            </div>
+
+
+
+                            <!-- 장바구니 좋아요버튼 -->
+                            <div class="buttonCover">
+                                <button onclick="addToCart(this)"> 장바구니 추가</button>
+                                <button class="like-button" onclick="toggleLike(this)"> </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <!-- 공유하기버튼 -->
+                        <button id="shareButton"><i class="fa-light fa-share-nodes"></i></button>
+                        <img src="./images/newProduct/05.jpeg" alt="">
+                        <div class="product-details">
+                            <h2>[NEW신상]멍멍팔팔 황태맛 져키 200g</h2>
+                            <p class="price">
+                                <span class="red">41%</span>
+                                8,900원
+                                <span><del> 15,000원</del></span>
+                            </p>
+                            <div class="stars">
+                                <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i></p>
+                                (22,540)
+                            </div>
+
+
+                            <!-- 장바구니 좋아요버튼 -->
+                            <div class="buttonCover">
+                                <button onclick="addToCart(this)"> 장바구니 추가</button>
+                                <button class="like-button" onclick="toggleLike(this)"> </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <!-- 공유하기버튼 -->
+                        <button id="shareButton"><i class="fa-light fa-share-nodes"></i></button>
+                        <img src="./images/newProduct/06.png" alt="">
+                        <div class="product-details">
+                            <h2>[NEW신상]자유펫 시코니딘 20g</h2>
+                            <p class="price">
+                                <span class="red"></span>
+                                19,000원
+                                <span><del></del></span>
+                            </p>
+                            <div class="stars">
+                                <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i></p>
+                                (22,540)
+                            </div>
+
+
+                            <!-- 장바구니 좋아요버튼 -->
+                            <div class="buttonCover">
+                                <button onclick="addToCart(this)"> 장바구니 추가</button>
+                                <button class="like-button" onclick="toggleLike(this)"> </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <!-- 공유하기버튼 -->
+                        <button id="shareButton"><i class="fa-light fa-share-nodes"></i></button>
+                        <img src="./images/newProduct/07.png" alt="">
+                        <div class="product-details">
+                            <h2>[NEW신상]그롤링 독 글로우 힙앤조인트 치킨4.8kg</h2>
+                            <p class="price">
+                                <span class="red">20%</span>
+                                57,600원
+                                <span><del> 72,000원</del></span>
+                            </p>
+                            <div class="stars">
+                                <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i></p>
+                                (22,540)
+                            </div>
+
+
+                            <!-- 장바구니 좋아요버튼 -->
+                            <div class="buttonCover">
+                                <button onclick="addToCart(this)"> 장바구니 추가</button>
+                                <button class="like-button" onclick="toggleLike(this)"> </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <!-- 공유하기버튼 -->
+                        <button id="shareButton"><i class="fa-light fa-share-nodes"></i></button>
+                        <img src="./images/newProduct/08.jpg" alt="">
+                        <div class="product-details">
+                            <h2>[NEW신상][무료배송] 펫트리온 복숭아&딸기 요거트 트릿 70g</h2>
+                            <p class="price">
+                                <span class="red"></span>
+                                15,000원
+                                <span><del></del></span>
+                            </p>
+                            <div class="stars">
+                                <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i></p>
+                                (22,540)
+                            </div>
+
+
+                            <!-- 장바구니 좋아요버튼 -->
+                            <div class="buttonCover">
+                                <button onclick="addToCart(this)"> 장바구니 추가</button>
+                                <button class="like-button" onclick="toggleLike(this)"> </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <!-- 공유하기버튼 -->
+                        <button id="shareButton"><i class="fa-light fa-share-nodes"></i></button>
+                        <img src="./images/newProduct/09.png" alt="">
+                        <div class="product-details">
+                            <h2>[NEW신상] 어거스틴 어프루브드 제올라이트 160g</h2>
+                            <p class="price">
+                                <span class="red"></span>
+                                59,000원
+                                <span><del></del></span>
+                            </p>
+                            <div class="stars">
+                                <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i></p>
+                                (22,540)
+                            </div>
+
+
+                            <!-- 장바구니 좋아요버튼 -->
+                            <div class="buttonCover">
+                                <button onclick="addToCart(this)"> 장바구니 추가</button>
+                                <button class="like-button" onclick="toggleLike(this)"> </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <!-- 공유하기버튼 -->
+                        <button id="shareButton"><i class="fa-light fa-share-nodes"></i></button>
+                        <img src="./images/newProduct/10.jpeg" alt="">
+                        <div class="product-details">
+                            <h2>[NEW신상]멍멍팔팔 황태맛 져키200g</h2>
+                            <p class="price">
+                                <span class="red">41%</span>
+                                8,900원
+                                <span><del> 15,000원</del></span>
+                            </p>
+                            <div class="stars">
+                                <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i></p>
+                                (22,540)
+                            </div>
+
+
+                            <!-- 장바구니 좋아요버튼 -->
+                            <div class="buttonCover">
+                                <button onclick="addToCart(this)"> 장바구니 추가</button>
+                                <button class="like-button" onclick="toggleLike(this)"> </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <!-- 공유하기버튼 -->
+                        <button id="shareButton"><i class="fa-light fa-share-nodes"></i></button>
+                        <img src="./images/newProduct/11.png" alt="">
+                        <div class="product-details">
+                            <h2>[NEW신상] 어거스틴 어프루브드 제올라이트 320g</h2>
+                            <p class="price">
+                                <span class="red"></span>
+                                89,900원
+                                <span><del></del></span>
+                            </p>
+                            <div class="stars">
+                                <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i></p>
+                                (22,540)
+                            </div>
+
+
+                            <!-- 장바구니 좋아요버튼 -->
+                            <div class="buttonCover">
+                                <button onclick="addToCart(this)"> 장바구니 추가</button>
+                                <button class="like-button" onclick="toggleLike(this)"> </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <!-- 공유하기버튼 -->
+                        <button id="shareButton"><i class="fa-light fa-share-nodes"></i></button>
+                        <img src="./images/newProduct/12.jpeg" alt="">
+                        <div class="product-details">
+                            <h2>[NEW신상]반짝 배변패드 리틀포레스트 M 50매 (40X50)</h2>
+                            <p class="price">
+                                <span class="red"></span>
+                                14,900원
+                                <span><del></del></span>
+                            </p>
+                            <div class="stars">
+                                <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i></p>
+                                (22,540)
+                            </div>
+
+
+                            <!-- 장바구니 좋아요버튼 -->
+                            <div class="buttonCover">
+                                <button onclick="addToCart(this)"> 장바구니 추가</button>
+                                <button class="like-button" onclick="toggleLike(this)"> </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <!-- 공유하기버튼 -->
+                        <button id="shareButton"><i class="fa-light fa-share-nodes"></i></button>
+                        <img src="./images/newProduct/13.jpeg" alt="">
+                        <div class="product-details">
+                            <h2> [NEW신상]멍멍팔팔 조인트 30캡슐</h2>
+                            <p class="price">
+                                <span class="red">68%</span>
+                                15,900원
+                                <span><del> 50,000원</del></span>
+                            </p>
+                            <div class="stars">
+                                <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i></p>
+                                (22,540)
+                            </div>
+
+
+                            <!-- 장바구니 좋아요버튼 -->
+                            <div class="buttonCover">
+                                <button onclick="addToCart(this)"> 장바구니 추가</button>
+                                <button class="like-button" onclick="toggleLike(this)"> </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <!-- 공유하기버튼 -->
+                        <button id="shareButton"><i class="fa-light fa-share-nodes"></i></button>
+                        <img src="./images/newProduct/14.png" alt="">
+                        <div class="product-details">
+                            <h2>[NEW신상] 그롤링 독 글로우 로우알러지 밀월&치킨 4.8kg</h2>
+                            <p class="price">
+                                <span class="red">20%</span>
+                                57,600원
+                                <span><del> 72,000원</del></span>
+                            </p>
+
+                            <div class="stars">
+                                <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i></p>
+                                (22,540)
+                            </div>
+
+
+                            <div class="buttonCover">
+                                <button onclick="addToCart(this)"> 장바구니 추가</button>
+
+                                <button class="like-button" onclick="toggleLike(this)"> </button>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="product">
+                        <!-- 공유하기버튼 -->
+                        <button id="shareButton"><i class="fa-light fa-share-nodes"></i></button>
+                        <img src="./images/newProduct/15.jpg" alt="">
+                        <div class="product-details">
+                            <h2>[NEW신상][무료배송] 펫트리온 열빙어 트릿 70g</h2>
+                            <p class="price">
+                                <span class="red"></span>
+                                16,000원
+                                <span><del> </del></span>
+                            </p>
+                            <div class="stars">
+                                <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i></p>
+                                (22,540)
+                            </div>
+
+
+                            <div class="buttonCover">
+                                <button onclick="addToCart(this)"> 장바구니 추가</button>
+
+                                <button class="like-button" onclick="toggleLike(this)"> </button>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+
+
+            </section>
+
 
         </main>
         <footer>
@@ -873,21 +1061,23 @@
                 </div>
                 <div class="info">
                     <ul>
-                        <li>이용약관</li>
-                        <li>개인정보처리방침</li>
-                        <li>회사소개</li>
+                        <li>이용약관 |</li>
+                        <li><strong>개인정보처리방침 </strong>|</li>
+                        <li>회사소개 |</li>
                     </ul>
                 </div>
-                <div class="contactUS">
+                <div class="contactUs">
+
                     <ul>
+                        <li>고객센터 |</li>
                         <li>02-511-6381</li>
                         <li>cs@pet-friends.co.kr</li>
                     </ul>
                 </div>
                 <div class="sns">
                     <ul>
-                        <li>fb</li>
-                        <li>insta</li>
+                        <li><i class="fa-brands fa-facebook"></i></li>
+                        <li><i class="fa-brands fa-square-instagram"></i></li>
                     </ul>
                 </div>
             </div>
@@ -910,6 +1100,8 @@
 
 
         // swiper 슬라이드
+        new Swiper('.swiper-container');
+
         const mySwiper = new Swiper('.swiper-container', {
             direction: 'horizontal',
             loop: true,
@@ -923,8 +1115,9 @@
                 prevEl: '.swiper-button-prev',
             },
             autoplay: {
-                delay: 3000
+                delay: 1500
             },
+
 
         });
     </script>
