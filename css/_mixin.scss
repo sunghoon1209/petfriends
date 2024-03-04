@@ -1,0 +1,79 @@
+@charset "utf-8";
+
+
+@import "./variable";
+
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
+
+@font-face {
+    font-family: 'KIMM_Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2212@1.0/KIMM_Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'intelone-mono-font-family-regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-1@1.1/intelone-mono-font-family-regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+
+li,
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+    cursor: none;
+}
+
+body {
+    background-color: $bgc;
+    font-family: 'KIMM_Bold', sans-serif;
+    letter-spacing: -0.0625em;
+}
+
+.blind {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+
+@mixin pagename {
+    font-size: 3rem;
+    font-weight: 600;
+    text-align: center;
+    color: #111;
+    
+    margin-top: 60px;
+
+    // &:hover {
+    //     box-shadow: inset 0 0 2px rgba(255, 255, 255, 0.05),
+    //         inset 4px 4px 6px rgba(0, 0, 0, 0.2);
+    //     color: yellow;
+    //     text-shadow: 0 0 15px yellow, 0 0 25px yellow;
+    //     animation: color 2s linear infinite;
+    // }
+
+ 
+}
+
+@mixin pageInner{
+    width: $grid;
+    height: 100%;
+    position: relative;
+    margin: 0px auto;
+
+  }
