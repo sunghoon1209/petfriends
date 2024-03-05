@@ -7,6 +7,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 li,
@@ -24,56 +25,70 @@ a {
 body {
 
     // width: $grid;
-
+   
     // margin: 0 auto;
     font-family: 'Pretendard-Regular';
     // background-color: #f7f7f7;
-    background-color: #e9e9e9;
+    // background-color: #e9e9e9;
 }
-
+// 알림창
+#alert{
+    position: fixed;
+    width: 600px;
+    height: 40px;
+    background-color: $primary_color;
+    color: #fff;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 99999;
+    border-radius: 25px;
+    display: none;
+    
+}
 // header
 header {
     width: 100%;
     height: 140px;
-    padding: 0 240px 0;
+    // padding: 0 240px 0;
     position: fixed;
     background-color: #fff;
     z-index: 999;
-    border-bottom: 1px solid $primary_color;
+    border-bottom: 3px solid $primary_color;
+    padding: 0 5%;
 
 
 
     .headerInner {
+        width: $grid;
         display: flex;
-        // margin: 0 auto;
-        // width: $grid;
-        height: 140px;
-
         justify-content: space-between;
         align-items: center;
-        // gap: 20px;
-        // grid-template-columns: 1fr 1fr 1fr;
+        margin: 0 auto;
+        height: 140px;       
+      
+        
     }
 }
 
 header .headerInner {
     h1.logo {
-        width: 10%
+        img {
+            max-width: 100%
+        }
     }
 
     .searchTab {
-        width: 50%;
+        width: 60%;
         height: 48px;
         border: 2px solid $primary_color;
         border-radius: 50px;
         background-color: #fff;
         position: relative;
-
-        // &::before{
-        //     content: "";
-        //   
-        // }
-
+      
         .searchBtn {
             position: absolute;
             width: 50px;
@@ -96,16 +111,17 @@ header .headerInner {
         }
 
         input {
-
+            width: 100%;
             height: 48px;
             border-radius: 50px;
-            background-color: #fff;
+            background-color: transparent;
             border: none;
             margin-left: 20px;
             outline: none;
             color: #111;
             font-size: 16px;
             font-weight: 600;
+            
         }
 
         .searchPage {
@@ -147,7 +163,7 @@ header .headerInner {
 
 header .headerInner {
     .nav_list {
-        width: 10%;
+        // width: 10%;
         display: flex;
         justify-content: flex-end;
         gap: 20px;
@@ -163,22 +179,25 @@ header .headerInner {
 
 // mainBanner
 main section:not(#mainBanner) {
-    padding: 0 240px 0;
+    // padding: 0 240px 0;
     background-color: #fff;
 }
 
 main section#mainBanner {
-    padding-top: 140px;
-    width: 100%;
+    padding: 0 5%;
+    // padding-top: 140px;
+    // width: 100%;
+
     height: 600px;
     overflow: hidden;
     background-color: #fff;
-
-
-
+   
     .swiper-container {
+        display: flex;
         width: $grid;
         margin: 0 auto;
+        // grid-template-columns: 1fr 1fr;
+        // width: $grid;
         overflow: hidden;
         position: relative;
 
@@ -190,7 +209,7 @@ main section#mainBanner {
             height: 700px;
 
             img {
-                width: $grid;
+                width: 100%;
                 height: 600px;
             }
 
@@ -202,28 +221,28 @@ main section#mainBanner {
 
         .swiper-button-prev {
             color: #d9d9d9;
-            background-color: rgba(0, 0, 0,0.3);
+            background-color: rgba(0, 0, 0, 0.3);
             width: 50px;
             height: 100px;
             transform: translateY(-50%);
             top: 45%;
             left: 0;
             border-top-right-radius: 15px;
-            border-bottom-right-radius: 15px;          
-          
+            border-bottom-right-radius: 15px;
+
         }
 
         .swiper-button-next {
             color: #d9d9d9;
-            background-color: rgba(0, 0, 0,0.3);
+            background-color: rgba(0, 0, 0, 0.3);
             width: 50px;
             height: 100px;
             transform: translateY(-50%);
             top: 45%;
             right: 0;
             border-top-left-radius: 15px;
-            border-bottom-left-radius: 15px;  
-           
+            border-bottom-left-radius: 15px;
+
         }
 
         .swiper-pagination-bullet-active {
@@ -236,14 +255,17 @@ main section#mainBanner {
 
 // 중간 배너
 main section#banner {
-    width: $grid;
+    // width: $grid;
     height: 111px;
     overflow: hidden;
     display: flex;
-    margin: 0 auto;
+    // margin: 0 auto;
+    // padding: 0 240px 0;
     align-items: center;
     gap: 20px;
     background-color: #fff;
+    margin-top: 0px;
+    margin-bottom: 0px;
 
 
     .banner {
@@ -267,14 +289,20 @@ main section#banner {
 
 // section#mainProduct
 
-
-section#mainProduct {
-    margin-top: 10px;
+section#mainProduct{
+    width: 100%;
+    padding: 20px 5%;
+    max-width: $grid;
+    margin: 0 auto;
 }
 
-section#mainProduct .product-container {
+
+
+section#mainProduct .product-container { 
+  
+
     display: grid;
-    gap: 20px;
+    gap: 15px;    
     grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
     // grid-template-columns 열의 크기 정의
     // auto fill - 컨테이너에 맞춰 자동으로 열 채움
@@ -319,6 +347,8 @@ section#mainProduct .product-container {
         align-items: center;
         padding-right: 150px;
         padding-left: 50px;
+        
+        
     }
 
 
@@ -350,6 +380,8 @@ section#mainProduct .product-container {
             background-color: $primary_color;
         }
 
+        
+
     }
 
     ul#clear-items {
@@ -358,10 +390,20 @@ section#mainProduct .product-container {
         position: absolute;
         transform: translateX(-50%);
         left: 50%;
+        font-size: 18px;
+        
+        
 
         li {
-            width: 100%;
+           
+           
+            display: flex;
+            justify-content: space-between;
+           
+          
         }
+
+        i{color: $primary_color;}
     }
 
     ul.account {
@@ -373,9 +415,26 @@ section#mainProduct .product-container {
         left: 50%;
         width: 100%;
         display: flex;
-
+        border-top: 1px solid $primary_color;
+        background-color: $primary_color;
         display: flex;
         justify-content: center;
+
+        li{
+           
+            width: 20%;
+            
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 400;
+            color: #fff;
+            font-size: 24px;
+        }
+        // li#total {
+        //     color: $primary_color;
+        // }
 
     }
 }
@@ -496,7 +555,7 @@ button.unlike-button {
 
 // 서브페이지 최소값 사료모음
 main section:not(#mainBanner) {
-    margin-top: 10px;
+   
 
     h2 {
         padding-top: 20px;
@@ -512,10 +571,17 @@ main section:not(#mainBanner) {
 
 
 // nweProduct
+section#newProduct{
+    width: 100%;
+    padding: 20px 5%;
+    max-width: $grid;
+    margin: 0 auto;
+}
+
 
 section#newProduct .product-container {
     display: grid;
-    gap: 20px;
+    gap: 15px;    
     grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
 
     // overflow: hidden;
@@ -528,7 +594,11 @@ section#newProduct .product-container {
 section#popular {
     display: grid;
     gap: 20px;
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    width: 100%;
+    padding: 20px 5%;
+    max-width: $grid;
+    margin: 0 auto;
 
 
 
@@ -673,11 +743,7 @@ section#popular article.category {
                     font-size: 12px;
                 }
             }
-
         }
-
-
-
     }
 
 }
@@ -764,25 +830,37 @@ footer {
     width: 100%;
     height: 200px;
     background-color: $footer;
-
+    padding: 0 5%;
 
     .footerInner {
         width: $grid;
         height: 200px;
-        margin: 0 auto;
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
+        margin: 0 auto;
+      
+
+        // gap: 30px;
+        // justify-items: center;
+        // padding: 0 240px 0;
         align-items: center;
 
         ul {
             list-style: none;
+
+            p {
+                font-size: 16px;
+            }
         }
 
         .footerDetails {
+            font-size: 16px;
 
             // width: 50%;
             ul {
                 display: flex;
+
 
             }
         }
@@ -793,6 +871,7 @@ footer {
             ul {
                 display: flex;
                 gap: 10px;
+                font-size: 16px;
             }
         }
 
@@ -802,42 +881,48 @@ footer {
             ul {
                 display: flex;
                 gap: 10px;
+                font-size: 16px;
 
                 strong {
                     color: $primary_color;
                 }
-            }
-        }
 
-        .sns {
-            // width: 16%;
+                &:nth-child(3) {
 
-            ul {
-                display: flex;
-                justify-content: end;
-                gap: 10px;
+                    display: flex;
+                    // justify-content: end;
+                    gap: 10px;
 
-                li i {
-                    font-size: 28px;
-                    color: #ff40809d;
-                    cursor: pointer;
+                    li i {
+                        font-size: 28px;
+                        color: #ff40809d;
+                        cursor: pointer;
 
-                    &:hover {
-                        color: $primary_color;
+                        &:hover {
+                            color: $primary_color;
+                        }
+
                     }
                 }
             }
+
         }
+
+
+        // width: 16%;
+
+
+
     }
 }
 
 
 
-@media (max-width:760px) {
-    section#mainProduct .product-container {
-        grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
-    }
-}
+// @media (max-width:760px) {
+//     section#mainProduct .product-container {
+//         grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+//     }
+// }
 
 // @media (max-width:1840px) {
 //     header .headerInner{

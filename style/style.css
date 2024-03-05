@@ -105,6 +105,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 li,
@@ -121,30 +122,48 @@ a {
 
 body {
   font-family: "Pretendard-Regular";
-  background-color: #e9e9e9;
+}
+
+#alert {
+  position: fixed;
+  width: 600px;
+  height: 40px;
+  background-color: #FF4081;
+  color: #fff;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999;
+  border-radius: 25px;
+  display: none;
 }
 
 header {
   width: 100%;
   height: 140px;
-  padding: 0 240px 0;
   position: fixed;
   background-color: #fff;
   z-index: 999;
-  border-bottom: 1px solid #FF4081;
+  border-bottom: 3px solid #FF4081;
+  padding: 0 5%;
 }
 header .headerInner {
+  width: 74%;
   display: flex;
-  height: 140px;
   justify-content: space-between;
   align-items: center;
+  margin: 0 auto;
+  height: 140px;
 }
 
-header .headerInner h1.logo {
-  width: 10%;
+header .headerInner h1.logo img {
+  max-width: 100%;
 }
 header .headerInner .searchTab {
-  width: 50%;
+  width: 60%;
   height: 48px;
   border: 2px solid #FF4081;
   border-radius: 50px;
@@ -170,9 +189,10 @@ header .headerInner .searchTab .searchBtn i {
   font-size: 18px;
 }
 header .headerInner .searchTab input {
+  width: 100%;
   height: 48px;
   border-radius: 50px;
-  background-color: #fff;
+  background-color: transparent;
   border: none;
   margin-left: 20px;
   outline: none;
@@ -207,7 +227,6 @@ header .headerInner .searchTab .searchPage .searchTextCover p {
 }
 
 header .headerInner .nav_list {
-  width: 10%;
   display: flex;
   justify-content: flex-end;
   gap: 20px;
@@ -219,18 +238,17 @@ header .headerInner .nav_list i {
 }
 
 main section:not(#mainBanner) {
-  padding: 0 240px 0;
   background-color: #fff;
 }
 
 main section#mainBanner {
-  padding-top: 140px;
-  width: 100%;
+  padding: 0 5%;
   height: 600px;
   overflow: hidden;
   background-color: #fff;
 }
 main section#mainBanner .swiper-container {
+  display: flex;
   width: 74%;
   margin: 0 auto;
   overflow: hidden;
@@ -243,7 +261,7 @@ main section#mainBanner .swiper-container .swiper-wrapper {
   height: 700px;
 }
 main section#mainBanner .swiper-container .swiper-wrapper img {
-  width: 74%;
+  width: 100%;
   height: 600px;
 }
 main section#mainBanner .swiper-container .swiper-pagination {
@@ -276,14 +294,14 @@ main section#mainBanner .swiper-container .swiper-pagination-bullet-active {
 }
 
 main section#banner {
-  width: 74%;
   height: 111px;
   overflow: hidden;
   display: flex;
-  margin: 0 auto;
   align-items: center;
   gap: 20px;
   background-color: #fff;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 main section#banner .banner {
   background: url(../images/banner.jpeg) no-repeat center/contain;
@@ -301,12 +319,15 @@ main section#banner .membership img {
 }
 
 section#mainProduct {
-  margin-top: 10px;
+  width: 100%;
+  padding: 20px 5%;
+  max-width: 74%;
+  margin: 0 auto;
 }
 
 section#mainProduct .product-container {
   display: grid;
-  gap: 20px;
+  gap: 15px;
   grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
 }
 section#mainProduct .product-container .product {
@@ -404,9 +425,14 @@ section#mainProduct .product-container .product .product-details {
   position: absolute;
   transform: translateX(-50%);
   left: 50%;
+  font-size: 18px;
 }
 #nav ul#clear-items li {
-  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+#nav ul#clear-items i {
+  color: #FF4081;
 }
 #nav ul.account {
   list-style: none;
@@ -417,8 +443,20 @@ section#mainProduct .product-container .product .product-details {
   left: 50%;
   width: 100%;
   display: flex;
+  border-top: 1px solid #FF4081;
+  background-color: #FF4081;
   display: flex;
   justify-content: center;
+}
+#nav ul.account li {
+  width: 20%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 400;
+  color: #fff;
+  font-size: 24px;
 }
 
 .buttonCover {
@@ -455,9 +493,6 @@ button.unlike-button {
   outline: none;
 }
 
-main section:not(#mainBanner) {
-  margin-top: 10px;
-}
 main section:not(#mainBanner) h2 {
   padding-top: 20px;
   margin-bottom: 20px;
@@ -466,9 +501,16 @@ main section:not(#mainBanner) h2 strong {
   color: #FF4081;
 }
 
+section#newProduct {
+  width: 100%;
+  padding: 20px 5%;
+  max-width: 74%;
+  margin: 0 auto;
+}
+
 section#newProduct .product-container {
   display: grid;
-  gap: 20px;
+  gap: 15px;
   grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
 }
 section#newProduct .product-container .product {
@@ -516,7 +558,11 @@ section#newProduct .product-container .product .product-details {
 section#popular {
   display: grid;
   gap: 20px;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  width: 100%;
+  padding: 20px 5%;
+  max-width: 74%;
+  margin: 0 auto;
 }
 section#popular article {
   width: auto;
@@ -673,17 +719,25 @@ footer {
   width: 100%;
   height: 200px;
   background-color: #FAFAFA;
+  padding: 0 5%;
 }
 footer .footerInner {
   width: 74%;
   height: 200px;
-  margin: 0 auto;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0 auto;
   align-items: center;
 }
 footer .footerInner ul {
   list-style: none;
+}
+footer .footerInner ul p {
+  font-size: 16px;
+}
+footer .footerInner .footerDetails {
+  font-size: 16px;
 }
 footer .footerInner .footerDetails ul {
   display: flex;
@@ -691,30 +745,25 @@ footer .footerInner .footerDetails ul {
 footer .footerInner .contactUs ul {
   display: flex;
   gap: 10px;
+  font-size: 16px;
 }
 footer .footerInner .info ul {
   display: flex;
   gap: 10px;
+  font-size: 16px;
 }
 footer .footerInner .info ul strong {
   color: #FF4081;
 }
-footer .footerInner .sns ul {
+footer .footerInner .info ul:nth-child(3) {
   display: flex;
-  justify-content: end;
   gap: 10px;
 }
-footer .footerInner .sns ul li i {
+footer .footerInner .info ul:nth-child(3) li i {
   font-size: 28px;
   color: rgba(255, 64, 128, 0.6156862745);
   cursor: pointer;
 }
-footer .footerInner .sns ul li i:hover {
+footer .footerInner .info ul:nth-child(3) li i:hover {
   color: #FF4081;
-}
-
-@media (max-width: 760px) {
-  section#mainProduct .product-container {
-    grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
-  }
 }

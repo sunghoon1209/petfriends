@@ -4,214 +4,526 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>주성훈 | 포트폴리오</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <title> 주성훈 - Shopping Cart</title>
+    <link rel="stylesheet" href="./style/style.css">
+    <!-- 스와이퍼 슬라이드css -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <!-- 폰트어썸 -->
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.0/css/all.css">
+    <script defer src="./js/shop.js"></script>
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-    <script src="./js/script.js"></script>
+    <!-- 스와이퍼슬라이드 js -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </head>
 
 <body>
-    <!-- 마우스커서 -->
-    <div class="custom-cursor"></div>
-
-  
-    <h1 class="logo">JSH</h1>
-    <div class="hbm" id="hbm"><img src="./images/hbm.gif" alt=""></div>
-
-    <!-- header -->
-
-    <header>
-
-
-        <div class="headerInner">
-            <!-- <h1 class="logo"><a href="#">JSH</a></h1> -->
-            <ul class="submenu">
-                
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#project">Project</a></li>
-                <li><a href="#me">Me</a></li>
-                <li><a href="#Contact">Contact</a></li>
-            </ul>
-        </div>
-    </header>
-    <main>
-        
-        <section id="project">
-
-            <h2 class="blind">Project</h2>
-            <div class="portInner">
-                <div class="pagename work">Project</div>
-                <!-- 포트폴리오 -->
-                <div class="works">
-                    <!-- 1 -->
-                    <div class="worksBox" href="#">
-                        <img src="./images/portFolio.png" alt="">
-                        <div class="imgInner">
-                            <a href="https://sunghoon1209.github.io/portfolio/landingpage">Portfolio</a>
-                            <div class="iconBox">
-                             
-                                <div class="details detailsPort" id="detailsPort">
-                                    <i class="fa-solid fa-circle-info"></i>
-                                    <p id="portDetails">자세히보기</p>
-                                </div>
+    <div id="wrap">
+        <header>
+            <div class="headerInner">
+                <h1 class="logo"><img src="./images/logo_petfriends.png" alt="펫프렌즈로고"></h1>
+                <div class="searchTab">
+                    <div class="searchBtn"><i class="fa-solid fa-magnifying-glass"></i></div>
+                    <input type="text" id="searchBox" placeholder="어떤 상품을 찾으시나요?">
+                    <div class="searchPage" id="searchPage">
+                        <h2>추천테마 </h2>
+                        <div class="searchTextCover">
+                            <div><img src="./images/search/search_theme_bangsiri.png" alt="">
+                                <p>다른아이들은<br>뭘먹지?</p>
                             </div>
+                            <div><img src="./images/search/search_theme_big_dog.png" alt="">
+                                <p>왕큰댕댕이들<br>모여라</p>
+                            </div>
+                            <div><img src="./images/search/search_theme_feed_sample.png" alt="">
+                                <p>한정수량<br>맘마샘플</p>
+                            </div>
+                            <div><img src="./images/search/search_theme_pf_only.png" alt="">
+                                <p> 펫프ONLY<br>단독판매</p>
+                            </div>
+
                         </div>
+
+
                     </div>
+                </div>
+                <nav class="nav_list">
+                    <div class="my"><i class="fa-solid fa-dog"></i></div>
+                    <div class="cart" id="cartBtn"><i class="fa-solid fa-bag-shopping"></i></div>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <div id="alert"><span>이미 장바구니에 추가되었습니다.</span></div>
+            <section id="mainBanner">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="./images/swiper/banner01.png" alt="배너1"></div>
+                        <div class="swiper-slide"><img src="./images/swiper/banner02.png" alt="배너2"></div>
+                        <div class="swiper-slide"><img src="./images/swiper/banner03.png" alt="배너3"></div>
+                        <div class="swiper-slide"><img src="./images/swiper/banner04.png" alt="배너4"></div>
+                        <div class="swiper-slide"><img src="./images/swiper/banner05.png" alt="배너5"></div>
+                        <div class="swiper-slide"><img src="./images/swiper/banner06.png" alt="배너6"></div>
+                        <!-- <div class="swiper-slide"><img src="./images/swiper/banner07.png" alt="배너1"></div> -->
+                        <!-- <div class="swiper-slide"><img src="./images/swiper/banner08.png" alt="배너1"></div> -->
+
+
+                        <!-- If we need navigation buttons -->
+
+
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+
+                    <!-- <div class="swiper-scrollbar"></div> -->
+                </div>
+
+
+            </section>
+            <section id="banner">
+
+                <div class="membership">
+                    <img src="./images/membership3.png" alt="">
+                    <img src="./images/membership1.png" alt="">
+                    <img src="./images/membership2.png" alt="">
+
+                    <img src="./images/membership4.png" alt="">
+                </div>
+                <div class="banner"></div>
+            </section>
+            <section id="mainProduct">
+                <h2>내새꾸에게 <Strong>재구매율84%</Strong>를 보이는 간식이에요</h2>
+                <!-- 장바구니 -->
+                <div id="nav">
+
+                    <div id="cart">
+                        <!-- <h2>장바구니</h2> -->
+                     
+                        <ul id="clear-items">
+                            
+                        </ul>
+                        <button id="clear-cart" onclick="clearCart()">전체삭제</button>
+                        <ul class="account">
+                            <li>총 금액 :</li>
+                            <li id="total"> </li>
+
+
+                        </ul>
+                    </div>
+                    <!-- xbtn -->
+                    <div id="xb"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <rect x="1.56525" width="14.757" height="2.21355" rx="1.10678"
+                                transform="rotate(45 1.56525 0)" fill="#FF4081" />
+                            <rect x="0.707107" y="10.4348" width="13.757" height="1.21355" rx="0.606776"
+                                transform="rotate(-45 0.707107 10.4348)" fill="#FF4081" stroke="#FF4081" />
+                        </svg></div>
+                </div>
+
+                <!-- 제품 -->
+                <div class="product-container">
                     <!-- 1 -->
-                    <div class="worksBox" href="#">
-                        <img src="./images/groundX.png" alt="포폴페이지01">
-                        <div class="imgInner">
-                            <a href="https://sunghoon1209.github.io/GroundX" target="_blank">Ground X</a>
-                            <div class="iconBox">
-                                
-                                <div class="details detailsGroundX">
-                                    <i class="fa-solid fa-circle-info"></i>
-                                    <p>자세히보기</p>
+                    <div class="product">
+                        <!-- 공유하기버튼 -->
+                        <button id="shareButton"><i class="fa-light fa-share-nodes"></i></button>
+                        <!-- 공유하기버튼 -->
+                        <button id="shareButton"><i class="fa-light fa-share-nodes"></i></button>
+                        <img src="./images/product/product01.jpeg" alt="상품1">
+
+                        <div class="product-details">
+                            <h2>캣만두 라이프 에센셜 치킨 142g</h2>
+                            <p class="price">
+
+
+
+                                <span class="red"></span>
+                                33,000원
+                                <span><del></del></span>
+
+                            </p>
+                            <div class="btncontain">
+                                <div class="stars">
+                                    <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                            class="fa-solid fa-star"></i></p>
+                                    (22,540)
+                                </div>
+
+
+                                <!-- 장바구니 좋아요버튼 -->
+                                <div class="buttonCover">
+                                    <button onclick="addToCart(this)"> 장바구니 추가</button>
+
+                                    <button class="like-button" onclick="toggleLike(this)"> </button>
                                 </div>
                             </div>
                         </div>
-
                     </div>
                     <!-- 2 -->
-                    <div class="worksBox" href="#">
-                        <img src="./images/gucci.png" alt="">
-                        <div class="imgInner">
-                            <a href="https://sunghoon1209.github.io/GroundX" target="_blank">Gucci</a>
-                            <div class="iconBox">
-                                
-                                <div class="details detailsGucci" id="detailsGucci">
-                                    <i class="fa-solid fa-circle-info"></i>
-                                    <p>자세히보기</p>
-                                </div>
+                    <div class="product">
+                        <!-- 공유하기버튼 -->
+                        <button id="shareButton"><i class="fa-light fa-share-nodes"></i></button>
+                        <img src="./images/product/product02.gif" alt="상품1">
+                        <div class="product-details">
+                            <h2>[어워즈]촉촉트릿 북어 80g</h2>
+                            <p class="price">
+                                <span class="red">21%</span>
+                                11,900원
+                                <span><del> 15,000원</del></span>
+                            </p>
+                            <div class="stars">
+                                <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i></p>
+                                (22,540)
                             </div>
-                        </div>
-                    </div>
-                    <!-- 1 -->
-                    <div class="worksBox" href="#">
-                        <img src="./images/dev.png" alt="">
-                        <div class="imgInner">
-                            <a href="https://sunghoon1209.github.io/GroundX" target="_blank">Devsisters</a>
-                            <div class="iconBox">
-                               
-                                <div class="details detailsDev">
-                                    <i class="fa-solid fa-circle-info"></i>
-                                    <p>자세히보기</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- 1 -->
-                    <div class="worksBox" href="#">
-                        <img src="./images/samsung.png" alt="">
-                        <div class="imgInner">
-                            <a href="https://sunghoon1209.github.io/GroundX" target="_blank">Samsung</a>
-                            <div class="iconBox">
-                                
-                                <div class="details detailsSamsung">
-                                    <i class="fa-solid fa-circle-info"></i>
-                                    <p>자세히보기</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- 1 -->
-                    <div class="worksBox" href="#">
-                        <img src="./images/hanhwa.png" alt="">
-                        <div class="imgInner">
-                            <a href="https://sunghoon1209.github.io/GroundX" target="_blank">Hanhwa</a>
-                            <div class="iconBox">
-                                
-                                <div class="details detailsHanhwa">
-                                    <i class="fa-solid fa-circle-info"></i>
-                                    <p>자세히보기</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- 1 -->
-                    <div class="worksBox" href="#">
-                        <img src="./images/ITSIX.png" alt="">
-                        <div class="imgInner">
-                            <a href="https://sunghoon1209.github.io/GroundX" target="_blank">ITSIX</a>
-                            <div class="iconBox">
-                             
-                                <div class="details detailsItsix">
-                                    <i class="fa-solid fa-circle-info"></i>
-                                    <p>자세히보기</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- 1 -->
-                    <div class="worksBox" href="#">
-                        <img src="./images/hpoint.png" alt="">
-                        <div class="imgInner">
-                            <a href="https://sunghoon1209.github.io/GroundX" target="_blank">Hpoint</a>
-                            <div class="iconBox">
-                                
-                                <div class="details detailsHpoint">
-                                    <i class="fa-solid fa-circle-info"></i>
-                                    <p>자세히보기</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- 1 -->
-                    <div class="worksBox" href="#">
-                        <img src="./images/3d.png" alt="">
-                        <div class="imgInner">
-                            <a href="https://sunghoon1209.github.io/GroundX" target="_blank">3D</a>
-                            <div class="iconBox">
-                               
-                                <div class="details details3d">
-                                    <i class="fa-solid fa-circle-info"></i>
-                                    <p>자세히보기</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- 1 -->
-                    <div class="worksBox" href="#">
-                        <img src="./images/samyang.png" alt="null">
-                        <div class="imgInner">
-                            <a href="https://sunghoon1209.github.io/GroundX" target="_blank"> Samyang </a>
-                            <div class="iconBox">
 
-                           
-                              
-                                <div class="details detailsSamyang">
-                                    <i class="fa-solid fa-circle-info"></i>
-                                    <p>자세히보기</p>
-                                </div>
+
+                            <!-- 장바구니 좋아요버튼 -->
+                            <div class="buttonCover">
+                                <button onclick="addToCart(this)"> 장바구니 추가</button>
+                                <button class="like-button" onclick="toggleLike(this)"> </button>
                             </div>
                         </div>
                     </div>
-                    <!-- 1 -->
-                    <div class="worksBox" href="#">
-                        <img src="./images/weather.png" alt="null">
-                        <div class="imgInner">
-                            <a href="https://sunghoon1209.github.io/weather/">날씨검색</a>
-                            <div class="iconBox">
-                              
-                                <div class="details detailsWeather">
-                                    <i class="fa-solid fa-circle-info"></i>
-                                    <p>자세히보기</p>
-                                </div>
+                    <div class="product">
+                        <!-- 공유하기버튼 -->
+                        <button id="shareButton"><i class="fa-light fa-share-nodes"></i></button>
+                        <img src="./images/product/product03.jpeg" alt="상품1">
+                        <div class="product-details">
+                            <h2>호랑이 간식 27종[모음]</h2>
+                            <p class="price">
+                                <span class="red">29%</span>
+                                9,900원
+                                <span><del> 14,000원</del></span>
+                            </p>
+                            <div class="stars">
+                                <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i></p>
+                                (22,540)
+                            </div>
+
+
+                            <!-- 장바구니 좋아요버튼 -->
+                            <div class="buttonCover">
+                                <button onclick="addToCart(this)"> 장바구니 추가</button>
+                                <button class="like-button" onclick="toggleLike(this)"> </button>
                             </div>
                         </div>
                     </div>
-                    <!-- 1 -->
-                    <div class="worksBox" href="#">
-                        <img src="./images/petfriends.png" alt="null">
-                        <div class="imgInner">
-                            <a href="https://sunghoon1209.github.io/petfriends/">펫프렌즈</a>
-                            <div class="iconBox">
-                             
-                                <div class="details deatilsPetfriends">
-                                    <i class="fa-solid fa-circle-info"></i>
-                                    <p>자세히보기</p>
-                                </div>
+                    <div class="product">
+                        <!-- 공유하기버튼 -->
+                        <button id="shareButton"><i class="fa-light fa-share-nodes"></i></button>
+                        <img src="./images/product/product04.jpeg" alt="상품1">
+                        <div class="product-details">
+                            <h2>캣만두 라이프 에센셜 치킨 리틀 142g</h2>
+                            <p class="price">
+
+
+                                <span class="red"></span>
+                                33,000원
+                                <span><del></del></span>
+                            </p>
+                            <div class="stars">
+                                <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i></p>
+                                (22,540)
+                            </div>
+
+
+                            <!-- 장바구니 좋아요버튼 -->
+                            <div class="buttonCover">
+                                <button onclick="addToCart(this)"> 장바구니 추가</button>
+                                <button class="like-button" onclick="toggleLike(this)"> </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <!-- 공유하기버튼 -->
+                        <button id="shareButton"><i class="fa-light fa-share-nodes"></i></button>
+                        <img src="./images/product/product05.jpeg" alt="상품1">
+                        <div class="product-details">
+                            <h2>마도로스펫 북어트릿 120g</h2>
+                            <p class="price">
+                                <span class="red"></span>
+                                16,000원
+                                <span><del></del></span>
+
+                            </p>
+                            <div class="stars">
+                                <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i></p>
+                                (22,540)
+                            </div>
+
+
+                            <!-- 장바구니 좋아요버튼 -->
+                            <div class="buttonCover">
+                                <button onclick="addToCart(this)"> 장바구니 추가</button>
+                                <button class="like-button" onclick="toggleLike(this)"> </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <!-- 공유하기버튼 -->
+                        <button id="shareButton"><i class="fa-light fa-share-nodes"></i></button>
+                        <img src="./images/product/product06.jpeg" alt="상품1">
+                        <div class="product-details">
+                            <h2>[어워즈]본앤츄 위클리팩 터키츄 소고기힘줄 라운드타입 15g 7p</h2>
+                            <p class="price">
+                                <span class="red">20%</span>
+                                6,400원
+                                <span><del> 8,000원</del></span>
+                            </p>
+                            <div class="stars">
+                                <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i></p>
+                                (22,540)
+                            </div>
+
+
+                            <!-- 장바구니 좋아요버튼 -->
+                            <div class="buttonCover">
+                                <button onclick="addToCart(this)"> 장바구니 추가</button>
+                                <button class="like-button" onclick="toggleLike(this)"> </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <!-- 공유하기버튼 -->
+                        <button id="shareButton"><i class="fa-light fa-share-nodes"></i></button>
+                        <img src="./images/product/product07.webp" alt="상품1">
+                        <div class="product-details">
+                            <h2>메디멀 독 치카잼 관절 대용량 15g*25p</h2>
+                            <p class="price">
+                                <span class="red">28%</span>
+                                29,000원
+                                <span><del> 40,000원</del></span>
+                            </p>
+                            <div class="stars">
+                                <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i></p>
+                                (22,540)
+                            </div>
+
+
+                            <!-- 장바구니 좋아요버튼 -->
+                            <div class="buttonCover">
+                                <button onclick="addToCart(this)"> 장바구니 추가</button>
+                                <button class="like-button" onclick="toggleLike(this)"> </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <!-- 공유하기버튼 -->
+                        <button id="shareButton"><i class="fa-light fa-share-nodes"></i></button>
+                        <img src="./images/product/product08.webp" alt="상품1">
+                        <div class="product-details">
+                            <h2>알로 가득찬 동결건조 간식 촉촉트릿 열빙어 20g</h2>
+                            <p class="price">
+                                <span class="red">15%</span>
+                                4,700원
+                                <span><del> 5,500원</del></span>
+                            </p>
+                            <div class="stars">
+                                <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i></p>
+                                (22,540)
+                            </div>
+
+
+                            <!-- 장바구니 좋아요버튼 -->
+                            <div class="buttonCover">
+                                <button onclick="addToCart(this)"> 장바구니 추가</button>
+                                <button class="like-button" onclick="toggleLike(this)"> </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <!-- 공유하기버튼 -->
+                        <button id="shareButton"><i class="fa-light fa-share-nodes"></i></button>
+                        <img src="./images/product/product09.jpeg" alt="상품1">
+                        <div class="product-details">
+                            <h2>[ONLY펫프] 인트라젠 영양제 위장&면역 50p</h2>
+                            <p class="price">
+                                <span class="red">23%</span>
+                                13,900원
+                                <span><del> 18,000원</del></span>
+                            </p>
+                            <div class="stars">
+                                <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i></p>
+                                (22,540)
+                            </div>
+
+
+                            <!-- 장바구니 좋아요버튼 -->
+                            <div class="buttonCover">
+                                <button onclick="addToCart(this)"> 장바구니 추가</button>
+                                <button class="like-button" onclick="toggleLike(this)"> </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <!-- 공유하기버튼 -->
+                        <button id="shareButton"><i class="fa-light fa-share-nodes"></i></button>
+                        <img src="./images/product/product14.jpeg" alt="상품1">
+                        <div class="product-details">
+                            <h2>진짜육포 12종[모음]</h2>
+                            <p class="price">
+                                <span class="red">41%</span>
+                                5,900원
+                                <span><del> 10,000원</del></span>
+                            </p>
+                            <div class="stars">
+                                <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i></p>
+                                (22,540)
+                            </div>
+
+
+                            <!-- 장바구니 좋아요버튼 -->
+                            <div class="buttonCover">
+                                <button onclick="addToCart(this)"> 장바구니 추가</button>
+                                <button class="like-button" onclick="toggleLike(this)"> </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <!-- 공유하기버튼 -->
+                        <button id="shareButton"><i class="fa-light fa-share-nodes"></i></button>
+                        <img src="./images/product/product11.png" alt="상품1">
+                        <div class="product-details">
+                            <h2>포켄스 덴티페어리 독 디스펜서 소형견용 S 80p</h2>
+                            <p class="price">
+                                <span class="red">4%</span>
+                                32,900원
+                                <span><del> 34,200원</del></span>
+                            </p>
+                            <div class="stars">
+                                <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i></p>
+                                (22,540)
+                            </div>
+
+
+                            <!-- 장바구니 좋아요버튼 -->
+                            <div class="buttonCover">
+                                <button onclick="addToCart(this)"> 장바구니 추가</button>
+                                <button class="like-button" onclick="toggleLike(this)"> </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <!-- 공유하기버튼 -->
+                        <button id="shareButton"><i class="fa-light fa-share-nodes"></i></button>
+                        <img src="./images/product/product12.jpeg" alt="상품1">
+                        <div class="product-details">
+                            <h2>마이베프 별자리스틱 올인원패키지 15g*7p</h2>
+                            <p class="price">
+                                <span class="red">2%</span>
+                                5,900원
+                                <span><del> 6,000원</del></span>
+                            </p>
+                            <div class="stars">
+                                <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i></p>
+                                (22,540)
+                            </div>
+
+
+                            <!-- 장바구니 좋아요버튼 -->
+                            <div class="buttonCover">
+                                <button onclick="addToCart(this)"> 장바구니 추가</button>
+                                <button class="like-button" onclick="toggleLike(this)"> </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <!-- 공유하기버튼 -->
+                        <button id="shareButton"><i class="fa-light fa-share-nodes"></i></button>
+                        <img src="./images/product/product12.webp" alt="상품1">
+                        <div class="product-details">
+                            <h2> 메디멀 독 가글츄 대용량 25p</h2>
+                            <p class="price">
+                                <span class="red">35%</span>
+                                22,900원
+                                <span><del> 35,000원</del></span>
+                            </p>
+                            <div class="stars">
+                                <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i></p>
+                                (22,540)
+                            </div>
+
+
+                            <!-- 장바구니 좋아요버튼 -->
+                            <div class="buttonCover">
+                                <button onclick="addToCart(this)"> 장바구니 추가</button>
+                                <button class="like-button" onclick="toggleLike(this)"> </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <!-- 공유하기버튼 -->
+                        <button id="shareButton"><i class="fa-light fa-share-nodes"></i></button>
+                        <img src="./images/product/product10.jpeg" alt="상품1">
+                        <div class="product-details">
+                            <h2>강아지 촉촉트릿 13종 [모음]</h2>
+                            <p class="price">
+                                <span class="red">39%</span>
+                                8,500원
+                                <span><del> 14,000원</del></span>
+                            </p>
+
+                            <div class="stars">
+                                <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i></p>
+                                (22,540)
+                            </div>
+
+
+                            <!-- 장바구니 좋아요버튼 -->
+                            <div class="buttonCover">
+                                <button onclick="addToCart(this)"> 장바구니 추가</button>
+                                <button class="like-button" onclick="toggleLike(this)"> </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <!-- 공유하기버튼 -->
+                        <button id="shareButton"><i class="fa-light fa-share-nodes"></i></button>
+                        <img src="./images/product/product15.jpeg" alt="상품1">
+                        <div class="product-details">
+                            <h2>[특가할인] 호랑이 덴탈 플라그껌 40p</h2>
+                            <p class="price">
+                                <span class="red">21%</span>
+                                10,900원
+                                <span><del> 14,000원</del></span>
+                            </p>
+                            <div class="stars">
+                                <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i></p>
+                                (22,540)
+                            </div>
+
+
+                            <!-- 장바구니 좋아요버튼 -->
+                            <div class="buttonCover">
+                                <button onclick="addToCart(this)"> 장바구니 추가</button>
+                                <button class="like-button" onclick="toggleLike(this)"> </button>
                             </div>
                         </div>
                     </div>
@@ -219,463 +531,594 @@
 
 
                 </div>
-            </div>
-            <!-- 자세히보기 모달창 -->
-            <!-- portfolio -->
-            <div class="modalbg modalPort"></div>
-                <div class="modal">
-                    <div class="topmenu">
-                        <img src="./images/vs.svg" alt="비쥬얼스튜디오">
-                        <h2 class="modalName" id="modalName">  </h2>
-                        <div class="xbtn"><img  src="./images/xbtnvs.svg" alt=""></div>
+            </section>
+            <section id="popular">
+                <article class="choice">
+                    <div class="textCover">
+                        <h2>평점 4.5이상! 심쿵팸들의 선택!</h2><span>더보기</span>
                     </div>
-
-                    <div class="siteDetails">
-                        <div class="siteCover">
-                            <div class="site">
-                                <img class="modalImg" src="" alt="포폴이미지01" id="modalImg">
-                                <div>URL |<a class="link" href="" target="_blank" id="URL">
-                                       </a></div>
-                                <div>Code | <span id="zip"></span></div>
-                            </div>
+                    <div class="chioceProduct">
+                        <div class="chioceProductImg"><img src="./images/choiceProduct/img01.jpeg" alt="">
                         </div>
-                        <div class="des">
-                            <div>
-                                <div class="desname">SKILLS |</div>
-                                <div class="sort1" id="sort1"> </div>
-                                
-                            </div>
-                            <div>
-                                <div class="desname">TOOLS |</div>
-                                <div class="sort2" id="sort2"></div>
-                              
-                            </div>
-                            <div>
-                                <div class="desname">반응형</div>
-                            </div>
-                            <div>
-                                <div class="desname">프로젝트소개 </div>
-                            </div>
-                            <div class="prdes" id="prdes"> </div>
-                            <div>
-                                <div class="desname">주요기능 </div>
-                            </div>
-                            <div class="prdes">
-                                <div class="cover">
-                                    <img class="detailsImg" id="detailsImg" src="" alt="">
-                                </div>
-                                <div class="contactD" id="contactD">
-                                 
-                                </div>
+                        <div class="text">
 
+                            <div class="stars">
+                                <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i></p>
                             </div>
+                            <h3>
+                                [어워즈]촉촉트릿 북어 80g
+                            </h3>
+                            <p>부드러운 간식 찾고 있어서 <br> 이걸로 구매해봣어요 잘먹네요</p>
                         </div>
                     </div>
+
+                </article>
+                <article class="category">
+                    <h2>카테고리 인기상품</h2>
+                    <div class="tabMenu">
+                        <ul id="tab">
+                            <li class="tabOn sausage">소시지</li>
+                            <li class="tab bisket">비스켓/쿠키</li>
+                            <li class="tab can">캔/파우치</li>
+
+                        </ul>
+                    </div>
+                    <div class="produceMenu">
+                        <ul>
+                            <!-- 1 -->
+                            <li class="produceMenu01">
+                                <img src="./images/popularProduct/petmorningchicken.jpeg" alt="">
+                                <div class="productDetails">
+                                    <h3>[30개] 펫모닝 닭가슴살 22g</h3>
+                                    <p class="red"><strong>33%</strong><span>12,000원</span></p>
+                                    <p class="ea">개당 400원 (30개묶음 구매시)</p>
+                                    <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                            class="fa-solid fa-star"></i></p>
+                                </div>
+                            </li>
+                            <!-- 2 -->
+                            <li class="produceMenu02">
+                                <img src="./images/popularProduct/wowdogche.jpeg" alt="">
+                                <!-- <img src="images/popularProduct/allinonepackage.jpeg" alt="">
+                                <img src="images/popularProduct/ilike.jpeg" alt="">
+                                <img src="images/popularProduct/yellowchicken.jpeg" alt=""> -->
+                                <div class="productDetails">
+                                    <h3>바우와우 독 치즈소세지</h3>
+                                    <p class="red"><strong>11%</strong><span>4,000원</span></p>
+                                    <p class="ea">개당 4000원 (1개묶음 구매시)</p>
+                                    <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                            class="fa-solid fa-star"></i></p>
+                                </div>
+                            </li>
+                            <!-- 3 -->
+                            <li class="produceMenu03">
+                                <img src="./images/popularProduct/sticktype.jpeg" alt="">
+                                <div class="productDetails">
+                                    <h3>브리더랩 월간통살 닭가슴살 스틱타입 20g*30p</h3>
+                                    <p class="red"><strong></strong><span>10,900원</span></p>
+                                    <p class="ea"></p>
+                                    <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                            class="fa-solid fa-star"></i></p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                </article>
+                <article class="popular_search">
+                    <h2>펫프 인기검색어</h2>
+                    <p id="time">2024.02. 낮 12:00</p>
+                    <ul class="popular_search_cover">
+                        <li><span class="order">1</span> <span>노즈워크 </span> <span>-</span></li>
+                        <li><span class="order">2</span> <span>트라이엄프 </span> <span>-</span></li>
+                        <li><span class="order">3</span> <span>칫솔 </span> <span class="high">급상승</span></li>
+                        <li><span class="order">4</span> <span>방석 </span> <span>-</span></li>
+                        <li><span class="order">5</span> <span>샘플 </span> <span class="high">급상승</span></li>
+                        <li><span class="order">6</span> <span>유통기한임박 </span> <span>-</span></li>
+                        <li><span class="order">7</span> <span>호랑이 </span> <span class="high">급상승</span></li>
+                        <li><span class="order">8</span> <span>껌 </span> <span>-</span></li>
+                        <li><span class="order">9</span> <span>하네스 </span> <span>-</span></li>
+                        <li><span class="order">10</span> <span>배변패드 </span> <span>-</span></li>
+                        <li><span class="order">11</span> <span>강아지 </span> <span class="New">New</span></li>
+                        <li><span class="order">12</span> <span>고양이 </span> <span class="New">New</span></li>
+                        <li><span class="order">13</span> <span>장난감 </span> <span class="New">New</span></li>
+                        <li><span class="order">14</span> <span>분리불안 </span> <span class="New">New</span></li>
+                    </ul>
+                </article>
+            </section>
+
+            <section id="newProduct">
+                <h2>Hot 신상</h2>
+
+                <div class="product-container">
+                    <!-- 1 -->
+                    <div class="product">
+                        <!-- 공유하기버튼 -->
+                        <button id="shareButton"><i class="fa-light fa-share-nodes"></i></button>
+                        <!-- 공유하기버튼 -->
+                        <button id="shareButton"><i class="fa-light fa-share-nodes"></i></button>
+
+                        <img src="./images/newProduct/01.jpg" alt="">
+                        <div class="product-details">
+                            <h2>[NEW신상][무료배송] 펫트리온 열빙어 트릿 70g</h2>
+                            <p class="price">
+
+
+                                <span class="red"></span>
+                                16,000원
+                                <span><del></del></span>
+
+                            </p>
+                            <div class="btncontain">
+                                <div class="stars">
+                                    <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                            class="fa-solid fa-star"></i></p>
+                                            (2,540)
+                                </div>
+
+
+                                <!-- 장바구니 좋아요버튼 -->
+                                <div class="buttonCover">
+                                    <button onclick="addToCart(this)"> 장바구니 추가</button>
+                                    <button class="like-button" onclick="toggleLike(this)"> </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 2 -->
+                    <div class="product">
+                        <!-- 공유하기버튼 -->
+                        <button id="shareButton"><i class="fa-light fa-share-nodes"></i></button>
+                        <img src="./images/newProduct/02.jpeg" alt="">
+                        <div class="product-details">
+                            <h2>[NEW신상]멍멍팔팔 짜먹는 조인트츄 14g*10p</h2>
+                            <p class="price">
+                                <span class="red">60%</span>
+                                19,800원
+                                <span><del> 50,000원</del></span>
+                            </p>
+                            <div class="stars">
+                                <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i></p>
+                                (13,540)
+                            </div>
+
+
+                            <!-- 장바구니 좋아요버튼 -->
+                            <div class="buttonCover">
+                                <button onclick="addToCart(this)"> 장바구니 추가</button>
+                                <button class="like-button" onclick="toggleLike(this)"> </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <!-- 공유하기버튼 -->
+                        <button id="shareButton"><i class="fa-light fa-share-nodes"></i></button>
+                        <img src="./images/newProduct/03.jpeg" alt="">
+                        <div class="product-details">
+                            <h2>[NEW신상] 그롤링 독 글로우 아이케어 살몬 1.8kg</h2>
+                            <p class="price">
+                                <span class="red">20%</span>
+                                23,200원
+                                <span><del> 29,000원</del></span>
+                            </p>
+                            <div class="stars">
+                                <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i></p>
+                                (2,140)
+                            </div>
+
+
+                            <!-- 장바구니 좋아요버튼 -->
+                            <div class="buttonCover">
+                                <button onclick="addToCart(this)"> 장바구니 추가</button>
+                                <button class="like-button" onclick="toggleLike(this)"> </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <!-- 공유하기버튼 -->
+                        <button id="shareButton"><i class="fa-light fa-share-nodes"></i></button>
+                        <img src="./images/newProduct/04.jpeg" alt="">
+                        <div class="product-details">
+                            <h2>[NEW신상]그롤링 독 글로우 힙앤조인트 치킨1.8kg</h2>
+                            <p class="price">
+                                <span class="red">20%</span>
+                                23,200원
+                                <span><del> 29,000원</del></span>
+                            </p>
+                            <div class="stars">
+                                <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i></p>
+                                (7,540)
+                            </div>
+
+
+
+                            <!-- 장바구니 좋아요버튼 -->
+                            <div class="buttonCover">
+                                <button onclick="addToCart(this)"> 장바구니 추가</button>
+                                <button class="like-button" onclick="toggleLike(this)"> </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <!-- 공유하기버튼 -->
+                        <button id="shareButton"><i class="fa-light fa-share-nodes"></i></button>
+                        <img src="./images/newProduct/05.jpeg" alt="">
+                        <div class="product-details">
+                            <h2>[NEW신상]멍멍팔팔 황태맛 져키 200g</h2>
+                            <p class="price">
+                                <span class="red">41%</span>
+                                8,900원
+                                <span><del> 15,000원</del></span>
+                            </p>
+                            <div class="stars">
+                                <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i></p>
+                                (540)
+                            </div>
+
+
+                            <!-- 장바구니 좋아요버튼 -->
+                            <div class="buttonCover">
+                                <button onclick="addToCart(this)"> 장바구니 추가</button>
+                                <button class="like-button" onclick="toggleLike(this)"> </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <!-- 공유하기버튼 -->
+                        <button id="shareButton"><i class="fa-light fa-share-nodes"></i></button>
+                        <img src="./images/newProduct/06.png" alt="">
+                        <div class="product-details">
+                            <h2>[NEW신상]자유펫 시코니딘 20g</h2>
+                            <p class="price">
+                                <span class="red"></span>
+                                19,000원
+                                <span><del></del></span>
+                            </p>
+                            <div class="stars">
+                                <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i></p>
+                                (225)
+                            </div>
+
+
+                            <!-- 장바구니 좋아요버튼 -->
+                            <div class="buttonCover">
+                                <button onclick="addToCart(this)"> 장바구니 추가</button>
+                                <button class="like-button" onclick="toggleLike(this)"> </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <!-- 공유하기버튼 -->
+                        <button id="shareButton"><i class="fa-light fa-share-nodes"></i></button>
+                        <img src="./images/newProduct/07.png" alt="">
+                        <div class="product-details">
+                            <h2>[NEW신상]그롤링 독 글로우 힙앤조인트 치킨4.8kg</h2>
+                            <p class="price">
+                                <span class="red">20%</span>
+                                57,600원
+                                <span><del> 72,000원</del></span>
+                            </p>
+                            <div class="stars">
+                                <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i></p>
+                                (271)
+                            </div>
+
+
+                            <!-- 장바구니 좋아요버튼 -->
+                            <div class="buttonCover">
+                                <button onclick="addToCart(this)"> 장바구니 추가</button>
+                                <button class="like-button" onclick="toggleLike(this)"> </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <!-- 공유하기버튼 -->
+                        <button id="shareButton"><i class="fa-light fa-share-nodes"></i></button>
+                        <img src="./images/newProduct/08.jpg" alt="">
+                        <div class="product-details">
+                            <h2>[NEW신상][무료배송] 펫트리온 복숭아&딸기 요거트 트릿 70g</h2>
+                            <p class="price">
+                                <span class="red"></span>
+                                15,000원
+                                <span><del></del></span>
+                            </p>
+                            <div class="stars">
+                                <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i></p>
+                                (17,224)
+                            </div>
+
+
+                            <!-- 장바구니 좋아요버튼 -->
+                            <div class="buttonCover">
+                                <button onclick="addToCart(this)"> 장바구니 추가</button>
+                                <button class="like-button" onclick="toggleLike(this)"> </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <!-- 공유하기버튼 -->
+                        <button id="shareButton"><i class="fa-light fa-share-nodes"></i></button>
+                        <img src="./images/newProduct/09.png" alt="">
+                        <div class="product-details">
+                            <h2>[NEW신상] 어거스틴 어프루브드 제올라이트 160g</h2>
+                            <p class="price">
+                                <span class="red"></span>
+                                59,000원
+                                <span><del></del></span>
+                            </p>
+                            <div class="stars">
+                                <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i></p>
+                                (17,540)
+                            </div>
+
+
+                            <!-- 장바구니 좋아요버튼 -->
+                            <div class="buttonCover">
+                                <button onclick="addToCart(this)"> 장바구니 추가</button>
+                                <button class="like-button" onclick="toggleLike(this)"> </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <!-- 공유하기버튼 -->
+                        <button id="shareButton"><i class="fa-light fa-share-nodes"></i></button>
+                        <img src="./images/newProduct/10.jpeg" alt="">
+                        <div class="product-details">
+                            <h2>[NEW신상]멍멍팔팔 황태맛 져키200g</h2>
+                            <p class="price">
+                                <span class="red">41%</span>
+                                8,900원
+                                <span><del> 15,000원</del></span>
+                            </p>
+                            <div class="stars">
+                                <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i></p>
+                                (22,540)
+                            </div>
+
+
+                            <!-- 장바구니 좋아요버튼 -->
+                            <div class="buttonCover">
+                                <button onclick="addToCart(this)"> 장바구니 추가</button>
+                                <button class="like-button" onclick="toggleLike(this)"> </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <!-- 공유하기버튼 -->
+                        <button id="shareButton"><i class="fa-light fa-share-nodes"></i></button>
+                        <img src="./images/newProduct/11.png" alt="">
+                        <div class="product-details">
+                            <h2>[NEW신상] 어거스틴 어프루브드 제올라이트 320g</h2>
+                            <p class="price">
+                                <span class="red"></span>
+                                89,900원
+                                <span><del></del></span>
+                            </p>
+                            <div class="stars">
+                                <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i></p>
+                                (22,540)
+                            </div>
+
+
+                            <!-- 장바구니 좋아요버튼 -->
+                            <div class="buttonCover">
+                                <button onclick="addToCart(this)"> 장바구니 추가</button>
+                                <button class="like-button" onclick="toggleLike(this)"> </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <!-- 공유하기버튼 -->
+                        <button id="shareButton"><i class="fa-light fa-share-nodes"></i></button>
+                        <img src="./images/newProduct/12.jpeg" alt="">
+                        <div class="product-details">
+                            <h2>[NEW신상]반짝 배변패드 리틀포레스트 M 50매 (40X50)</h2>
+                            <p class="price">
+                                <span class="red"></span>
+                                14,900원
+                                <span><del></del></span>
+                            </p>
+                            <div class="stars">
+                                <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i></p>
+                                (22,540)
+                            </div>
+
+
+                            <!-- 장바구니 좋아요버튼 -->
+                            <div class="buttonCover">
+                                <button onclick="addToCart(this)"> 장바구니 추가</button>
+                                <button class="like-button" onclick="toggleLike(this)"> </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <!-- 공유하기버튼 -->
+                        <button id="shareButton"><i class="fa-light fa-share-nodes"></i></button>
+                        <img src="./images/newProduct/13.jpeg" alt="">
+                        <div class="product-details">
+                            <h2> [NEW신상]멍멍팔팔 조인트 30캡슐</h2>
+                            <p class="price">
+                                <span class="red">68%</span>
+                                15,900원
+                                <span><del> 50,000원</del></span>
+                            </p>
+                            <div class="stars">
+                                <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i></p>
+                                (22,540)
+                            </div>
+
+
+                            <!-- 장바구니 좋아요버튼 -->
+                            <div class="buttonCover">
+                                <button onclick="addToCart(this)"> 장바구니 추가</button>
+                                <button class="like-button" onclick="toggleLike(this)"> </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <!-- 공유하기버튼 -->
+                        <button id="shareButton"><i class="fa-light fa-share-nodes"></i></button>
+                        <img src="./images/newProduct/14.png" alt="">
+                        <div class="product-details">
+                            <h2>[NEW신상] 그롤링 독 글로우 로우알러지 밀월&치킨 4.8kg</h2>
+                            <p class="price">
+                                <span class="red">20%</span>
+                                57,600원
+                                <span><del> 72,000원</del></span>
+                            </p>
+
+                            <div class="stars">
+                                <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i></p>
+                                (22,540)
+                            </div>
+
+
+                            <div class="buttonCover">
+                                <button onclick="addToCart(this)"> 장바구니 추가</button>
+
+                                <button class="like-button" onclick="toggleLike(this)"> </button>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="product">
+                        <!-- 공유하기버튼 -->
+                        <button id="shareButton"><i class="fa-light fa-share-nodes"></i></button>
+                        <img src="./images/newProduct/15.jpg" alt="">
+                        <div class="product-details">
+                            <h2>[NEW신상][무료배송] 펫트리온 열빙어 트릿 70g</h2>
+                            <p class="price">
+                                <span class="red"></span>
+                                16,000원
+                                <span><del> </del></span>
+                            </p>
+                            <div class="stars">
+                                <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i></p>
+                                (22,540)
+                            </div>
+
+
+                            <div class="buttonCover">
+                                <button onclick="addToCart(this)"> 장바구니 추가</button>
+
+                                <button class="like-button" onclick="toggleLike(this)"> </button>
+                            </div>
+                        </div>
+                    </div>
+
+
+
                 </div>
-            
-           
-          
 
-        </section>
 
-        <!-- skills -->
-        <section id="skills">
-            <h2 class="blind">skills</h2>
-            <div class="skillsInner">
-                <div class="pagename skill">Skills/Tools</div>
 
-                <div class="skills">
-                    <div class="card">
-                        <div class="front"><img src="./images/html5.svg" alt=""></div>
-                        <div class="back">
-                            <div class="backInner">
-                                <p>HTML5</p>
-                                <ul>
-                                    <li><span>시멘틱요소</span>를 사용하여 웹페이지 제작</li>
-                                    <li><span>Form 요소</span>의 이해</li>
-                                    <li><span>마크업</span> 구조화</li>
-                                    <li><span>웹 접근성</span> 고려</li>
-                                    <li><span>크로스 브라우징</span> 이해</li>
+            </section>
 
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
 
-                        <div class="front"><img src="./images/css.svg" alt=""></div>
-                        <div class="back">
-                            <div class="backInner">
-                                <p>CSS</p>
-                                <ul>
-                                    <li><span>미디어쿼리</span>를 사용하여 다양한 기기와 화면크기에 대응하는 <span>반응형</span> 디자인 구현</li>
-                                    <li><span>Flex</span> 레이아웃을 이용하여 유연하고 강력한 레이아웃 설계</li>
-                                    <li><span>애니메이션과 트랜지션</span>으로 사용자 경험을 향상시키고 동적인 웹페이지 구현</li>
-                                    <li><span>크로스 브라우징</span> 이해</li>
+        </main>
+        <footer>
+            <div class="footerInner">
+                <div class="footerDetails">
+                    <p><strong>(주)펫프렌즈</strong></p>
+                    <p>대표이사 : 윤현신 / 서울특별시 강남구 도산대로4길 15,큐브타워</p>
+                    <p>사업자번호 : 175-81-001900 / 통신판매업 : 제2019-서울강남-04113호</p>
+                    <p>개인정보보호책임자 : 윤현신 / 구매안접(에스크로)서비스</p>
 
-                                </ul>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="card">
-                        <div class="front"><img src="./images/sass.svg" alt=""></div>
-                        <div class="back">
-                            <div class="backInner">
-                                <p>SASS</p>
-                                <ul>
-                                    <li><span>변수</span>를 사용하여 가독성을 높이고 유지보수 용이</li>
-                                    <li><span>Nesting</span>을 통해 가독성을 높이고 중복을 줄임</li>
-                                    <li><span>Mixins</span>을 통해 코드의 중복을 줄이고 재사용성 향상</li>
-                                    <li><span>웹 접근성</span> 고려</li>
-                                    <li><span>크로스 브라우징</span> 이해</li>
-
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="front"><img src="./images/js.svg" alt=""></div>
-                        <div class="back">
-                            <div class="backInner">
-                                <p>JAVASCRIPT</p>
-                                <ul>
-                                    <li>기본 문법 및 데이터 타입 이해하고 활용</li>
-                                    <li>DOM을 이해하고 웹 페이지의 요소들을 선택하고 조작</li>
-                                    <li>이벤트를 처리하고 이벤트 핸들러를 등록하여 사용자 상호작용에 반응</li>
-                                    <li> 코드를 모듈화하여 유지보수성을 높이고 재사용성 향상</li>
-                                    <li>자바스크립트를 효율적으로 사용하여 웹 애플리케이션의 성능 최적화 </li>
-
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="front"><img src="./images/jquery.svg" alt=""></div>
-                        <div class="back">
-                            <div class="backInner">
-                                <p>jQUERY</p>
-                                <ul>
-                                    <li>JQuery를 이용하여 코드를 간소화하여 코드를 더 읽기 쉽고 유지보수하기 쉽게 할 수 있습니다.</li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <div class="front"><img src="./images/react.svg" alt=""></div>
-                        <div class="back">
-                            <div class="backInner">
-                                <p>REACT</p>
-                                <ul>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="front"><img src="./images/vs.svg" alt=""></div>
-                        <div class="back">
-                            <div class="backInner">
-                                <p>Visual Studio Code</p>
-                                <ul>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="front"><img src="./images/figma.svg" alt=""></div>
-                        <div class="back">
-                            <div class="backInner">
-                                <p>FIGMA</p>
-                                <ul>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="front"><img src="./images/chatGpt.svg" alt=""></div>
-                        <div class="back">
-                            <div class="backInner">
-                                <p>ChatGpt</p>
-                                <ul>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="front"><img src="./images/zeplin.svg" alt=""></div>
-                        <div class="back">
-                            <div class="backInner">
-                                <p>zeplin</p>
-                                <ul>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="front"><img src="./images/github.svg" alt=""></div>
-                        <div class="back">
-                            <div class="backInner">
-                                <p>github</p>
-                                <ul>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="front"><img src="./images/MySQL.png" alt=""></div>
-                        <div class="back">
-                            <div class="backInner">
-                                <p>MySQL</p>
-                                <ul>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="front"><img src="./images/photoshop.svg" alt=""></div>
-                        <div class="back">
-                            <div class="backInner">
-                                <p>photoshop</p>
-                                <ul>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="front"><img src="./images/illu.svg" alt=""></div>
-                        <div class="back">
-                            <div class="backInner">
-                                <p>Illustr</p>
-                                <ul>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="front"><img src="./images/ani.svg" alt=""></div>
-                        <div class="back">
-                            <div class="backInner">
-                                <p>Animate</p>
-                                <ul>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="front"><img src="./images/xd.svg" alt=""></div>
-                        <div class="back">
-                            <div class="backInner">
-                                <p>XD</p>
-                                <ul>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="front"><img src="./images/react.svg" alt=""></div>
-                        <div class="back">
-                            <div class="backInner">
-                                <p>REACT</p>
-                                <ul>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="front"><img src="./images/react.svg" alt=""></div>
-                        <div class="back">
-                            <div class="backInner">
-                                <p>REACT</p>
-                                <ul>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>   
-                                    <li></li>
-
-                                </ul>   
-                            </div>
-                        </div>
-                    </div>
-                   
-
+                </div>
+                <div class="info">
+                    <ul>
+                        <li>이용약관 |</li>
+                        <li><strong>개인정보처리방침 </strong>|</li>
+                        <li>회사소개 |</li>
+                    </ul>
+                    <ul>
+                        <li>고객센터 |</li>
+                        <li>02-511-6381</li>
+                        <li>cs@pet-friends.co.kr</li>
+                    </ul>
+                    <ul>
+                        <li><i class="fa-brands fa-facebook"></i></li>
+                        <li><i class="fa-brands fa-square-instagram"></i></li>
+                    </ul>
                 </div>
                 
-
-
-
+              
             </div>
+        </footer>
+    </div>
 
-        </section>
-        <!-- me -->
-        <section id="me">
-            <h2 class="blind">me</h2>
-            <div class="meInner">
-                <div class="pagename aboutMe">About Me</div>
-                <div class="meIntro">
-                    <p>
-                        “<strong class="strong">사용자 경험</strong>을 개선하고 <strong class="strong2">탁월한 디자인과 기술을 결합</strong>하여 사용자들에게 <strong class="strong3">가치 있는 경험을 제공</strong>하는 것이 제 목표입니다.”
-                    </p>
-                    <div>  <span> 2023.10.16~2024.3.13 이젠컴퓨터아카데미</span>
-                        <p>현장수요에 맞는 디지털디자인<br>(웹디자인, 웹퍼블리셔) 전문가 양성</p>
-                    </div>
+    <script>
+        const shareButtons = document.querySelectorAll("#shareButton");
+        shareButtons.forEach(button => {
+            // .foreEach => 각 요소에 접근함
+            button.addEventListener('click', function () {
+                share()
+            });
+        });
 
-
-                </div>
-
-            </div>
-        </section>
+        // 공유함수
+        function share() {
+            alert("링크가 복사되었습니다 : https://m.pet-friends.co.kr/main/");
+        }
 
 
+        // swiper 슬라이드
+        new Swiper('.swiper-container');
+
+        const mySwiper = new Swiper('.swiper-container', {
+            direction: 'horizontal',
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'bullets'
+            },
+            navigation: {
+
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            autoplay: {
+                delay: 1500
+            },
 
 
-        <section id="Contact">
-            <h2 class="blind">Contact</h2>
-            <div class="contactInner">
-                <div class="pagename cmn">Contact Us</div>
-                <div class="contactMe">
-
-                    <div class="contact">
-                        <div class="name">
-                            <a href="#"><i class="fa-solid fa-user"></i>주성훈</a>
-                        </div>
-                        <div class="age">
-                            <a href="#"><i class="fa-solid fa-image-user"></i></i>1994.12.9</a>
-                        </div>
-                        <div class="email">
-                            <a href=""><i class="fa-solid fa-envelope"></i>
-                                <input class="pn" name="pn" type="text" value="sunghoon.developer@gmail.com"
-                                    onclick="this.select();document.execCommand('copy');alert('클립보드에 복사 되었습니다.');return false;"
-                                    readonly /></a>
-
-                        </div>
-                        <div class="adress">
-                            <a href="#"><i class="fa-solid fa-location-dot"></i>경기도 안양시 만안구</a>
-                        </div>
-
-                        <div class="phone">
-                            <a href="#"><i class="fa-solid fa-phone"></i>010-5793-9412</a>
-                        </div>
-
-
-                    </div>
-
-                    <form method="post"
-                        action="https://script.google.com/macros/s/AKfycbxvtuaeb-e99n8sPlHl1nrjStnzfkNAMBoVzkKe-_azpqUOEfotLD_NEVv553iEQ44e/exec"
-                        target="blankifr" onsubmit="return doAction();">
-                        <div class="form">
-                            <div class="nameBox">
-                                <label for="name" class="name">Name : </label>
-                                <input type="text" id="name" name="name" maxlength="20" minlength="1">
-                            </div>
-                            <div class="emailBox">
-                                <label for="email" class="email">Email Adress : </label>
-                                <input type="email" id="email" name="email" maxlength="40" minlength="2">
-                            </div>
-                            <div class="subject">
-                                <label for="subject" class="subject">Subject : </label>
-                                <input type="textarea" id="subject" name="subject" maxlength="20" minlength="1">
-                            </div>
-                            <div class="message">
-                                <label for="message" class="message">Message : </label>
-                                <textarea name="message" id="message" minlength="2" cols="30" rows="10"></textarea>
-                                <!-- <input type="textarea" id="message" name="message" minlength="2"> -->
-                            </div>
-                            <button type="submit" id="btn" class="button">Send</button>
-                        </div>
-                    </form>
-
-                </div>
-            </div>
-
-        </section>
-
-    </main>
-    <footer></footer>
+        });
+    </script>
 
 </body>
-
-</html>
-
-<!-- 메일전송시 나오는 화면 할당 후 숨김 -->
-<iframe name='blankifr' style='display:none;'></iframe>
 
 </html>
