@@ -1,79 +1,272 @@
-@charset "utf-8";
-
-
-@import "./variable";
-
-@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
-
-@font-face {
-    font-family: 'KIMM_Bold';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2212@1.0/KIMM_Bold.woff2') format('woff2');
-    font-weight: 700;
-    font-style: normal;
-}
+// main color 
+$primary_color : #FF4081;
+$grid : 74%;
+$footer :#FAFAFA;
+// breakPoint 1840px : 72%
+// BEEDEF ;; F4EDED
 
 @font-face {
-    font-family: 'intelone-mono-font-family-regular';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-1@1.1/intelone-mono-font-family-regular.woff2') format('woff2');
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
     font-weight: 400;
     font-style: normal;
 }
-* {
-    margin: 0;
-    padding: 0;
-}
 
-li,
-ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
+@mixin product() {
 
-a {
-    text-decoration: none;
-    color: #000;
-    cursor: none;
-}
-
-body {
-    background-color: $bgc;
-    font-family: 'KIMM_Bold', sans-serif;
-    letter-spacing: -0.0625em;
-}
-
-.blind {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    clip: rect(0 0 0 0);
     overflow: hidden;
-}
-
-
-@mixin pagename {
-    font-size: 3rem;
-    font-weight: 600;
-    text-align: center;
-    color: #111;
-    
-    margin-top: 60px;
-
-    // &:hover {
-    //     box-shadow: inset 0 0 2px rgba(255, 255, 255, 0.05),
-    //         inset 4px 4px 6px rgba(0, 0, 0, 0.2);
-    //     color: yellow;
-    //     text-shadow: 0 0 15px yellow, 0 0 25px yellow;
-    //     animation: color 2s linear infinite;
-    // }
-
- 
-}
-
-@mixin pageInner{
-    width: $grid;
-    height: 100%;
+    border-radius: 5px;
+    background-color: #fff;
+    // border: 1px solid #ddd;
+    // background-color: red;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
     position: relative;
-    margin: 0px auto;
 
-  }
+    button#shareButton {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        width: 30px;
+        height: 30px;
+        text-align: center;
+        color: #000;
+        border: none;
+        background-color: rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        border-radius: 50%;
+        transition: opacity 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.3);
+
+        }
+
+        &:hover i {
+            color: #000;
+        }
+
+        i {
+            color: #fff;
+            font-size: 18px;
+
+        }
+    }
+
+
+    // 제품이미지
+    img {
+        border-radius: 20px;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+
+    // 제품내용
+    .product-details {
+        padding: 20px;
+
+
+    }
+
+}
+
+.product-details {
+    h2 {
+        margin-top: 0;
+        margin-bottom: 10px;
+        font-size: 17px;
+        font-weight: normal;
+        /* 넘칠때 점으로 표시 */
+        text-overflow: ellipsis;
+        /* 텍스트 줄바꿈 방지 */
+        white-space: nowrap;
+        overflow: hidden;
+
+
+
+
+    }
+
+    p.price {
+        font-size: 25px;
+        font-weight: bold;
+        color: #000;
+        margin-bottom: 20px;
+
+
+    }
+
+    span {
+        font-weight: normal;
+        font-size: 15px;
+        color: #999;
+
+    }
+
+    span.red {
+        color: $primary_color;
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    p i {
+        color: #ffd400;
+        font-size: 12px;
+    }
+
+    button {
+        cursor: pointer;
+        padding: 10px 20px;
+        border-radius: 5px;
+        margin-bottom: 5px;
+        margin-right: 2px;
+        margin-top: 10px;
+
+        &:nth-of-type(1) {
+            background-color: #ff40809d;
+            color: #fff;
+
+            border: none;
+
+
+
+            &:hover {
+                background-color: $primary_color;
+            }
+        }
+
+    }
+
+}
+
+@mixin newProduct() {
+
+    overflow: hidden;
+    border-radius: 5px;
+    background-color: #fff;
+    // border: 1px solid #ddd;
+    // background-color: red;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    position: relative;
+
+    button#shareButton {
+        position: absolute;
+        bottom: 32px;
+        right: 60px;
+        width: 30px;
+        height: 30px;
+        text-align: center;
+        // color: #000;
+        border: none;
+        background-color: #fff;
+
+        cursor: pointer;
+        border-radius: 50%;
+        transition: opacity 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:hover i {
+            color: $primary_color;
+        }
+
+        i {
+            color: #ff40809d;
+            font-size: 24px;
+            font-weight: 500;
+
+        }
+    }
+
+
+    // 제품이미지
+    img {
+        border-radius: 50%;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+
+    // 제품내용
+    .product-details {
+        padding: 20px;
+
+
+    }
+
+}
+
+.product-details {
+    h2 {
+        margin-top: 0;
+        margin-bottom: 10px;
+        font-size: 17px;
+        font-weight: normal;
+        /* 넘칠때 점으로 표시 */
+        text-overflow: ellipsis;
+        /* 텍스트 줄바꿈 방지 */
+        white-space: nowrap;
+        overflow: hidden;
+
+
+
+
+    }
+
+    p.price {
+        font-size: 25px;
+        font-weight: bold;
+        color: #000;
+        margin-bottom: 20px;
+
+
+    }
+
+    span {
+        font-weight: normal;
+        font-size: 15px;
+        color: #999;
+
+    }
+
+    span.red {
+        color: $primary_color;
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    p i {
+        color: #ffd400;
+        font-size: 12px;
+    }
+
+    button {
+        cursor: pointer;
+        padding: 10px 20px;
+        border-radius: 5px;
+        margin-bottom: 5px;
+        margin-right: 2px;
+        margin-top: 10px;
+
+        &:nth-of-type(1) {
+            background-color: #ff40809d;
+            color: #fff;
+
+            border: none;
+
+
+
+            &:hover {
+                background-color: $primary_color;
+            }
+        }
+
+    }
+
+}
