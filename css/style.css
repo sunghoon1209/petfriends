@@ -242,7 +242,7 @@ main section:not(#mainBanner) {
 }
 
 main section#mainBanner {
-  padding: 160px 0 0;
+  padding: 140px 0 0;
   height: 740px;
   overflow: hidden;
   background-color: #fff;

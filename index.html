@@ -1070,24 +1070,8 @@
             </div>
         </footer>
     </div>
-
-    <script>
-        const shareButtons = document.querySelectorAll("#shareButton");
-        shareButtons.forEach(button => {
-            // .foreEach => 각 요소에 접근함
-            button.addEventListener('click', function () {
-                share()
-            });
-        });
-
-        // 공유함수
-        function share() {
-            alert("링크가 복사되었습니다 : https://m.pet-friends.co.kr/main/");
-        }
-
-
-        // swiper 슬라이드
-        new Swiper('.swiper-container');
+  
+    <script> new Swiper('.swiper-container');
 
         const mySwiper = new Swiper('.swiper-container', {
             direction: 'horizontal',
@@ -1105,13 +1089,31 @@
                 prevEl: '.swiper-button-prev',
             },
             autoplay: {
-                delay: 1500
+                delay: 1500,
+                disableOnInteraction: false,
             },
             // effect: 'cube',
             speed: 500,          
 
 
+        });</script>
+    <script>
+        const shareButtons = document.querySelectorAll("#shareButton");
+        shareButtons.forEach(button => {
+            // .foreEach => 각 요소에 접근함
+            button.addEventListener('click', function () {
+                share()
+            });
         });
+
+        // 공유함수
+        function share() {
+            alert("링크가 복사되었습니다 : https://m.pet-friends.co.kr/main/");
+        }
+
+        
+        // swiper 슬라이드
+       
     </script>
 
 </body>
