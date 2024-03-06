@@ -79,17 +79,7 @@
 
 
             </section>
-            <section id="banner">
-
-                <div class="membership">
-                    <img src="./images/membership3.png" alt="">
-                    <img src="./images/membership1.png" alt="">
-                    <img src="./images/membership2.png" alt="">
-
-                    <img src="./images/membership4.png" alt="">
-                </div>
-                <div class="banner"></div>
-            </section>
+           
             <section id="mainProduct">
                 <h2>내새꾸에게 <Strong>재구매율84%</Strong>를 보이는 간식이에요</h2>
                 <!-- 장바구니 -->
@@ -1104,16 +1094,21 @@
             loop: true,
             pagination: {
                 el: '.swiper-pagination',
-                type: 'bullets'
+                type: 'bullets',
+                clickable: true,
+                
             },
+           
             navigation: {
-
+               
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
             },
             autoplay: {
                 delay: 1500
             },
+            // effect: 'cube',
+            speed: 500,          
 
 
         });

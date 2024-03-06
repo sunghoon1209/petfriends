@@ -25,14 +25,15 @@ a {
 body {
 
     // width: $grid;
-   
+
     // margin: 0 auto;
     font-family: 'Pretendard-Regular';
     // background-color: #f7f7f7;
     // background-color: #e9e9e9;
 }
+
 // 알림창
-#alert{
+#alert {
     position: fixed;
     width: 600px;
     height: 40px;
@@ -47,8 +48,9 @@ body {
     z-index: 99999;
     border-radius: 25px;
     display: none;
-    
+
 }
+
 // header
 header {
     width: 100%;
@@ -68,9 +70,9 @@ header {
         justify-content: space-between;
         align-items: center;
         margin: 0 auto;
-        height: 140px;       
-      
-        
+        height: 140px;
+
+
     }
 }
 
@@ -88,7 +90,7 @@ header .headerInner {
         border-radius: 50px;
         background-color: #fff;
         position: relative;
-      
+
         .searchBtn {
             position: absolute;
             width: 50px;
@@ -121,7 +123,7 @@ header .headerInner {
             color: #111;
             font-size: 16px;
             font-weight: 600;
-            
+
         }
 
         .searchPage {
@@ -184,32 +186,57 @@ main section:not(#mainBanner) {
 }
 
 main section#mainBanner {
-    padding: 0 5%;
-    // padding-top: 140px;
+    padding: 160px 0 0;
+
+
     // width: 100%;
 
-    height: 600px;
+    height: 740px;
     overflow: hidden;
     background-color: #fff;
-   
+
     .swiper-container {
-        display: flex;
-        width: $grid;
-        margin: 0 auto;
-        // grid-template-columns: 1fr 1fr;
-        // width: $grid;
+     
         overflow: hidden;
         position: relative;
+
 
         .swiper-wrapper {
             // width: $grid;
             width: 100%;
-            margin: 0 auto;
+           
             display: flex;
             height: 700px;
 
+            .swiper-slide {
+               
+                &:nth-child(1){
+                    background-color: #DDE5EC;
+                }
+                &:nth-child(2){
+                    background-color: #F9DAE8;
+                }
+                &:nth-child(3){
+                    background-color: #FFEBD3;
+                }
+                &:nth-child(4){
+                    background-color: #A2A2A2;
+                }
+                &:nth-child(5){
+                    background-color: #000;
+                }
+                &:nth-child(6){
+                    background-color: #302F36;
+                }
+              
+            }
+
+            
             img {
-                width: 100%;
+                display: flex;
+                width: $grid;
+                margin: 0 auto;
+                // width: 100%;
                 height: 600px;
             }
 
@@ -289,7 +316,7 @@ main section#banner {
 
 // section#mainProduct
 
-section#mainProduct{
+section#mainProduct {
     width: 100%;
     padding: 20px 5%;
     max-width: $grid;
@@ -298,11 +325,11 @@ section#mainProduct{
 
 
 
-section#mainProduct .product-container { 
-  
+section#mainProduct .product-container {
+
 
     display: grid;
-    gap: 15px;    
+    gap: 15px;
     grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
     // grid-template-columns 열의 크기 정의
     // auto fill - 컨테이너에 맞춰 자동으로 열 채움
@@ -347,8 +374,8 @@ section#mainProduct .product-container {
         align-items: center;
         padding-right: 150px;
         padding-left: 50px;
-        
-        
+
+
     }
 
 
@@ -380,7 +407,7 @@ section#mainProduct .product-container {
             background-color: $primary_color;
         }
 
-        
+
 
     }
 
@@ -391,19 +418,21 @@ section#mainProduct .product-container {
         transform: translateX(-50%);
         left: 50%;
         font-size: 18px;
-        
-        
+
+
 
         li {
-           
-           
+
+
             display: flex;
             justify-content: space-between;
-           
-          
+
+
         }
 
-        i{color: $primary_color;}
+        i {
+            color: $primary_color;
+        }
     }
 
     ul.account {
@@ -420,10 +449,10 @@ section#mainProduct .product-container {
         display: flex;
         justify-content: center;
 
-        li{
-           
+        li {
+
             width: 20%;
-            
+
             height: 60px;
             display: flex;
             align-items: center;
@@ -432,6 +461,7 @@ section#mainProduct .product-container {
             color: #fff;
             font-size: 24px;
         }
+
         // li#total {
         //     color: $primary_color;
         // }
@@ -555,7 +585,7 @@ button.unlike-button {
 
 // 서브페이지 최소값 사료모음
 main section:not(#mainBanner) {
-   
+
 
     h2 {
         padding-top: 20px;
@@ -571,7 +601,7 @@ main section:not(#mainBanner) {
 
 
 // nweProduct
-section#newProduct{
+section#newProduct {
     width: 100%;
     padding: 20px 5%;
     max-width: $grid;
@@ -581,7 +611,7 @@ section#newProduct{
 
 section#newProduct .product-container {
     display: grid;
-    gap: 15px;    
+    gap: 15px;
     grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
 
     // overflow: hidden;
@@ -839,7 +869,7 @@ footer {
         justify-content: space-between;
         flex-wrap: wrap;
         margin: 0 auto;
-      
+
 
         // gap: 30px;
         // justify-items: center;
