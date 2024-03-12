@@ -216,8 +216,8 @@ header .headerInner .searchTab .searchPage .searchTextCover {
   justify-content: space-between;
 }
 header .headerInner .searchTab .searchPage .searchTextCover img {
-  width: 100px;
-  height: 100px;
+  width: 80%;
+  height: auto;
   cursor: pointer;
 }
 header .headerInner .searchTab .searchPage .searchTextCover p {
@@ -784,12 +784,14 @@ footer .footerInner .info ul:nth-child(3) li i:hover {
   color: #FF4081;
 }
 
+@media (max-width: 1180px) {
+  .searchTab {
+    display: none;
+  }
+}
 @media (max-width: 760px) {
   header .headerInner h1.logo img {
     max-width: 50%;
-  }
-  header .headerInner .searchTab {
-    display: none;
   }
   #nav {
     width: 95%;
