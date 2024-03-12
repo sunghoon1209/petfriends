@@ -965,22 +965,22 @@ footer {
 
         }
     }
-}
-
-#nav {
-    width: 95%;
-    height: 50%;
-
-    #cart {
-        ul#clear-items{
-            font-size: 14px;
-            text-align: center;
-            width: 80%;
-        }
-        ul.account {
-            li{
-                font-size: 16px;
+    #nav {
+        width: 95%;
+        height: 50%;
+    
+        #cart {
+            ul#clear-items{
+                font-size: 14px;
+                text-align: center;
+                width: 80%;
+            }
+            ul.account {
+                li{
+                    font-size: 16px;
+                }
             }
         }
     }
 }
+

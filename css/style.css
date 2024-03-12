@@ -791,16 +791,16 @@ footer .footerInner .info ul:nth-child(3) li i:hover {
   header .headerInner .searchTab {
     display: none;
   }
-}
-#nav {
-  width: 95%;
-  height: 50%;
-}
-#nav #cart ul#clear-items {
-  font-size: 14px;
-  text-align: center;
-  width: 80%;
-}
-#nav #cart ul.account li {
-  font-size: 16px;
+  #nav {
+    width: 95%;
+    height: 50%;
+  }
+  #nav #cart ul#clear-items {
+    font-size: 14px;
+    text-align: center;
+    width: 80%;
+  }
+  #nav #cart ul.account li {
+    font-size: 16px;
+  }
 }
