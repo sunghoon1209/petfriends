@@ -147,7 +147,7 @@ window.onload = function () {
     let dateString = year + '년' + month + '월' + day + '일 기준';
     let time = document.getElementById("time");
     time.textContent = dateString;
-    console.log(time);
+    // console.log(time);
 
 
     // 검색영역에 focus시 영역등장
@@ -169,7 +169,7 @@ window.onload = function () {
 
         if (cart.style.right === "-100%" || cart.style.right === "") {
             // cart.style.display = "block";
-            cart.style.right = "10px";
+            cart.style.right = "0px";
         } else {
             // cart.style.display = "none";
             cart.style.right = "-100%";
@@ -218,7 +218,15 @@ function addToCart(button) {
     existingItems.forEach(item => {
         if (item.textContent.includes(productName)) {
             isExisting = true;
-            return //실행중지(종료)
+            let alertWindows = document.getElementById("alert");
+           
+            alertWindows.style.display = "flex"; //실행중지(종료)
+            
+
+            setTimeout(function () {
+                alertWindows.style.display = "none";
+                }, 1500);
+               
             // 포함되어있으면 true 반환, 그렇지 않으면 false 반환
         }
     });
@@ -230,16 +238,14 @@ function addToCart(button) {
     if (!isExisting) {
         const listItem = document.createElement('li');
         listItem.textContent = `${productName} | ${productPrice}`;
+        
         // listItem.style.display = "inline";
-        listItem.style.width = "600px"
-        listItem.style.textAlign = "center"
+        listItem.style.width = "500px";
+        listItem.style.textAlign = "center";
 
         // 삭제버튼 span 생성
         const removeButton = document.createElement('span');
-        removeButton.innerHTML = `<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <rect x="1.56525" width="14.757" height="2.21355" rx="1.10678" transform="rotate(45 1.56525 0)" fill="#FF4081"/>
-    <rect x="0.707107" y="10.4348" width="13.757" height="1.21355" rx="0.606776" transform="rotate(-45 0.707107 10.4348)" fill="#FF4081" stroke="#FF4081"/>
-    </svg>`;
+        removeButton.innerHTML = `<i class="fa-solid fa-trash"></i>`;
         // .innerHTML - html 변경시 사용
 
         // 리스트 아이템 추가
@@ -255,7 +261,7 @@ function addToCart(button) {
         // 추출한 문자열을 숫자로 변환
         let productPriceNum = Math.floor(result)
 
-        console.log(result);
+        // console.log(result);
         totalPrice += productPriceNum
 
 
@@ -298,7 +304,7 @@ function clearCart() {
     // 합계금액 0원으로 초기화
     totalPrice -= totalPrice;
     // listTotalPrice.remove();
-    console.log(totalPrice)
+    // console.log(totalPrice)
     listTotalPrice.textContent = totalPrice + '원';
 }
 
@@ -312,9 +318,6 @@ function clearCart() {
 
 
 function toggleLike(button) {
-    // 자바스크립트는, 특성상 매개변수에 (button) 로 써주면
-    // html 요소로 간주
-    // button.textContent = button.classList.contains('like-button') ? '싫어요' : '좋아요';
-    button.classList.toggle('like-button');
+button.classList.toggle('like-button');
     button.classList.toggle('unlike-button');
 }
